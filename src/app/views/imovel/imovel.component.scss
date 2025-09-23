@@ -84,8 +84,8 @@ img {
 /* Media query para telas menores (ex: metade de 1920px ≈ 960px) */
 @media (max-width: 960px) {
   .logo img {
-    max-width: 55%;
-    padding: 1rem 0rem 0rem 0rem;
+    max-width: 35%;
+    padding: 0rem 0rem 0rem 0rem;
   }
 
   .user {
@@ -208,6 +208,8 @@ img {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 260px;
+
 
   .container-img {
     width: 250px;
@@ -224,9 +226,9 @@ img {
       height: 100%;
       display: block;
       border-radius: 20px;
+      }
     }
   }
-}
 
 .preco-tipo {
     width: 100%;
@@ -236,7 +238,7 @@ img {
     font-size: 18px;
     font-weight: bold;
     color: #111;
-    padding: 0 16px 20px 16px;
+    padding: 0 16px 10px 16px;
     margin-bottom: 2px;
     line-height: 0.2px;
   }
@@ -266,7 +268,53 @@ img {
     font-size: 16px;
     color: #222;
     font-weight: bold;
-    padding: 0 16px 20px 16px;
+    padding: 0 16px 1rem 16px;
     margin-bottom: 0;
     line-height: 25px;
   }
+
+  @media (max-width: 960px) {
+  .container {
+    flex-direction: row;
+    height: auto;
+    padding: 12px 4px 10px 4px;
+    border-radius: 20px;
+    width: 900px;
+  }
+
+  .filtros {
+    flex-direction: row;
+    gap: 8px;
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .filtros input,
+  .filtros select {
+    min-width: 190px;
+    width: auto;
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  .btn-pesquisar {
+    width: auto;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-top: 0;
+  }
+
+  .filtro-localizacao-wrapper i {
+    left: 8px;
+    font-size: 1.1rem;
+  }
+  .filtro-localizacao {
+    padding-left: 28px !important;
+  }
+  .card-imovel {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}

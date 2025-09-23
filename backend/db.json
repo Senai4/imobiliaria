@@ -75,6 +75,30 @@
       "tipoImovel": "Apartamento",
       "descricao": "Apartamento moderno, bem localizado, próximo ao comércio.",
       "corretorId": "2"
-    }
+    },
+     {
+       "id": "1",
+       "titulo": "Apartamento Moderno",
+       "imagemUrl": "assets/img/apartamento1.jpg",
+       "aluguel": 3500,
+       "condominio": 500,
+       "iptu": 200,
+       "seguroIncendio": 100,
+       "taxaServico": 50,
+       "total": 3850,
+       "caracteristicas": {
+         "quartos": 2,
+         "banheiros": 2,
+         "tamanho": 50,
+         "vagas": 1,
+         "mobilia": "Sim",
+         "pet": "Aceita"
+       },
+       "endereco": "Rua Miguel Cervantes, Cachambi",
+       "cidade": "Rio de Janeiro",
+       "tipoImovel": "Apartamento",
+       "descricao": "Apartamento moderno, bem localizado, próximo ao comércio.",
+       "corretorId": "2"
+     }
   ]
 }
