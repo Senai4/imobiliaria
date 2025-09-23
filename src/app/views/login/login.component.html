@@ -1,0 +1,36 @@
+<div *ngIf="mensagemErro" class="mensagem-erro">
+  {{ mensagemErro }}
+</div>
+
+<!-- Ícone de seta para home -->
+<div class="voltar-home">
+  <a routerLink="/home" title="Ir para Home">
+    <i class="fa fa-arrow-left"></i>
+  </a>
+</div>
+
+<!-- Ícone de seta para home -->
+<div class="voltar-home">
+  <a routerLink="/home" title="Ir para Home">
+    <i class="fa fa-arrow-left"></i>
+  </a>
+</div>
+
+<div class="container">
+  <p>Login</p>
+  <div class="input-icon">
+    <input type="email" placeholder="Email" [(ngModel)]="credenciais.email" name="email">
+    <i class="fa fa-user"></i>
+  </div>
+  <div class="input-icon">
+    <input type="password" placeholder="Senha" [(ngModel)]="credenciais.senha" name="senha">
+    <i class="fa fa-lock"></i>
+  </div>
+  <button (click)="fazerLogin()" type="submit">Login</button>
+  <h1>Ainda não possui conta <a href="/cadastro">Cadastre-se</a></h1>
+  <div class="icons">
+    <i class="fab fa-google"></i>
+    <i class="fab fa-github"></i>
+    <i class="fab fa-linkedin"></i>
+  </div>
+</div>

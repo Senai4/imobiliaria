@@ -1,0 +1,35 @@
+<div *ngIf="mensagemStatus"
+     class="mensagem-status"
+     [ngClass]="{'erro': isErro, 'sucesso': !isErro}">
+  {{ mensagemStatus }}
+</div>
+
+<!-- Ícone de seta para home -->
+<div class="voltar-home">
+  <a routerLink="/home" title="Ir para Home">
+    <i class="fa fa-arrow-left"></i>
+  </a>
+</div>
+
+<div class="container">
+  <p>Cadastro</p>
+  <div class="input-icon">
+  <input type="nome" placeholder="Nome" [(ngModel)]="dadosCadastro.nome">
+  <i class="fa fa-user"></i>
+  </div>
+  <div class="input-icon">
+  <input type="email" placeholder="Email" [(ngModel)]="dadosCadastro.email">
+  <i class="fa fa-envelope"></i>
+  </div>
+  <div class="input-icon">
+  <input type="password" placeholder="Senha" [(ngModel)]="dadosCadastro.senha">
+  <i class="fa fa-lock"></i>
+  </div>
+  <button (click)="fazerCadastro()">Cadastrar</button>
+  <h1>Já possui uma conta? <a href="/login">Faça Login</a></h1>
+  <div class="icons">
+    <i class="fab fa-google"></i>
+    <i class="fab fa-github"></i>
+    <i class="fab fa-linkedin"></i>
+  </div>
+</div>

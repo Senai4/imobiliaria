@@ -1,0 +1,74 @@
+<div class="navbar">
+  <div class="menuImg" #menuIcon (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="menu" #menu [class.active]="menuAtivo">
+    <a href="/imoveis">Imóveis</a>
+    <a href="/meus-interesses">Interesses</a>
+    <a href="/home">Logout</a>
+  </div>
+
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="logo">
+  </div>
+
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+  <i class="fas fa-user-circle"></i>
+  <span class="user-name">
+    {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+  </span>
+</div>
+</div>
+
+<!-- Filtros de busca -->
+ <div class="container">
+<div class="filtros">
+  <div class="filtro-localizacao-wrapper">
+    <i class="fas fa-map-marker-alt"></i>
+    <input type="text" placeholder="Localização" class="filtro-localizacao">
+  </div>
+  <select class="filtro-tipo-negocio">
+    <option>Alugar</option>
+    <option>Vender</option>
+  </select>
+  <select class="filtro-valor">
+    <option>Valor</option>
+    <option>Até R$ 1.000</option>
+    <option>Até R$ 5.000</option>
+    <option>Acima de R$ 5.000</option>
+  </select>
+  <select class="filtro-tipo-imovel">
+    <option>Tipo de Imóvel</option>
+    <option>Apartamento</option>
+    <option>Casa</option>
+    <option>Terreno</option>
+  </select>
+  <button class="btn-pesquisar">Pesquisar</button>
+</div>
+</div>
+
+<!-- Cards de imóveis -->
+<div class="cards-imoveis">
+  <div class="card-imovel" *ngFor="let imovel of imoveis">
+    <div class="imagem-imovel">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
+      <span *ngIf="!imovel.imagemUrl">Imagem</span>
+    </div>
+    <div class="info-imovel">
+      <div class="preco-tipo">
+        R$ {{ imovel.aluguel | number }} Aluguel
+        <span class="favorito">
+          <i class="far fa-heart"></i>
+        </span>
+      </div>
+      <div class="detalhes">
+        {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
+      </div>
+      <div class="endereco">
+        {{ imovel.endereco }}<br>
+        {{ imovel.cidade }}
+      </div>
+    </div>
+  </div>
+</div>

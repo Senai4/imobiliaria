@@ -1,0 +1,80 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "admin@exemplo.com",
+      "senha": "admin123",
+      "perfil": "admin",
+      "nome": "ADM"
+    },
+    {
+      "id": "2",
+      "email": "usuario@exemplo.com",
+      "senha": "usuario123",
+      "perfil": "usuario",
+      "nome": "Iasmin"
+    },
+    {
+      "id": "406c",
+      "nome": "Cleber",
+      "email": "dcleber159@gmail.com",
+      "senha": "542555in",
+      "perfil": "usuario"
+    },
+    {
+      "id": "04d6",
+      "nome": "Isabella",
+      "email": "isa@gmail.com",
+      "senha": "123456",
+      "perfil": "usuario"
+    },
+    {
+      "id": "184e",
+      "nome": "Isabella ",
+      "email": "isa2@gmail.com",
+      "senha": "123456",
+      "perfil": "usuario"
+    },
+    {
+      "id": "a380",
+      "nome": "Iasmin",
+      "email": "iasmin@gmail.com",
+      "senha": "26ZK10q2",
+      "perfil": "usuario"
+    },
+    {
+      "id": "40ec",
+      "nome": "Giovana",
+      "email": "gigi@gmail.com",
+      "senha": "1002302611",
+      "perfil": "usuario"
+    }
+  ],
+
+  "imovel": [
+    {
+      "id": "1",
+      "titulo": "Apartamento Moderno",
+      "imagemUrl": "assets/img/apartamento1.png",
+      "aluguel": 3500,
+      "condominio": 500,
+      "iptu": 200,
+      "seguroIncendio": 100,
+      "taxaServico": 50,
+      "total": 3850,
+      "caracteristicas": {
+        "quartos": 2,
+        "banheiros": 2,
+        "tamanho": 50,
+        "vagas": 1,
+        "mobilia": "Sim",
+        "pet": "Aceita"
+      },
+      "endereco": "Rua Miguel Cervantes, Cachambi",
+      "cidade": "Rio de Janeiro",
+      "tipoImovel": "Apartamento",
+      "descricao": "Apartamento moderno, bem localizado, próximo ao comércio.",
+      "corretorId": "2"
+    }
+  ]
+}

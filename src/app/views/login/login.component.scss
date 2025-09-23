@@ -1,0 +1,187 @@
+// Ícone de seta para home no canto superior esquerdo
+.voltar-home {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 10;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  i {
+    color: #009B77;
+    font-size: 2rem;
+  }
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #009B77; // cor desejada
+}
+
+.container {
+  height: 650px;
+  width: 580px;
+  padding: 2rem;
+  background-color: #009B77;
+  border-radius: 30px;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // centraliza horizontalmente
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 5.9rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0rem 2rem 2rem 2rem; // padding-top menor
+
+  @media (max-width: 800px) {
+    font-size: 5.9rem;
+  }
+}
+
+input {
+  width: 90%;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 5rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.input-icon {
+  position: relative;
+  width: 90%;
+
+
+  i {
+    position: absolute;
+    left: 20px;
+    top: 32.2%;
+    transform: translateY(-40%);
+    color: #009B77;
+    font-size: 1.8rem;
+    pointer-events: none;
+  }
+
+  input {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem 0.8rem 3.5rem; // espaço para o ícone à esquerda
+    border-radius: 50px;
+    border: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    color: black;
+  }
+}
+
+button {
+  width: 50%;
+  height: 4rem;
+  border-radius: 50px;
+  border: 2px solid #f4f4f4;
+  font-size: 2.4rem;
+  padding: 0rem 1rem 0.8rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+
+  a {
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 4.5rem;
+
+  i {
+    font-size: 2.5rem;
+    color: white;
+    background: #009B77;
+    border-radius: 50%;
+    padding: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+
+  i.fa-google {
+    color: #009B77;
+    background: #fff;
+  }
+
+  i.fa-github {
+    color: #009B77;
+    background: #fff;
+  }
+
+  i.fa-linkedin {
+    color: #009B77;
+    background: #fff;
+  }
+}
+
+/* login.component.scss */
+.mensagem-erro {
+  position: absolute;
+  /* Posição absoluta em relação ao elemento pai */
+  top: 2%;
+  /* Ajuste a porcentagem para mover para cima ou para baixo */
+  left: 74%;
+  /* Centraliza horizontalmente */
+  transform: translateX(-145%);
+  /* Alinha ao centro com base na largura do elemento */
+
+  /* Estilos visuais para a caixa de mensagem */
+  background-color: #f4f4f4;
+  color: black;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  padding: 15px;
+  z-index: 1000;
+  /* Garante que a mensagem fique na frente de outros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  /* Adaptação para telas menores */
+  max-width: 350px;
+  /* Limita a largura máxima */
+  text-align: center;
+}
+
+/* Media query para centralizar a mensagem em telas maiores */
+@media (min-width: 1500px) {
+  .mensagem-erro {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
