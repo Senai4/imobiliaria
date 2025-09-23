@@ -5,12 +5,12 @@
 .navbar {
   width: 100%;
   height: 80px;
-  background-color: #009B77;
+  background-color: #009b77;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
-  position: relative;/* necessário para o menu absoluto */
+  position: relative; /* necessário para o menu absoluto */
   margin-bottom: 32px;
 }
 
@@ -31,7 +31,7 @@
   top: 10px;
   left: 10px;
   width: 300px;
-  background-color: #009B77;
+  background-color: #009b77;
   border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -68,17 +68,17 @@
 }
 
 .menu a:hover {
-  color: #009B77;
+  color: #009b77;
 }
 
 .logo {
   margin-left: 10px;
-}
 
 img {
   max-width: 18%;
   height: auto;
   padding: 0rem 0rem 0rem 0rem;
+}
 }
 
 /* Media query para telas menores (ex: metade de 1920px ≈ 960px) */
@@ -109,10 +109,10 @@ img {
 
 .user-name {
   color: #fff;
-  font-size: 20px;/* Tamanho da fonte do nome, pode ser ajustado */
-  font-weight: bold;/* Deixa o nome em negrito */
+  font-size: 20px; /* Tamanho da fonte do nome, pode ser ajustado */
+  font-weight: bold; /* Deixa o nome em negrito */
   padding-left: 10%;
-  white-space: nowrap;/* Impede que o nome quebre em várias linhas */
+  white-space: nowrap; /* Impede que o nome quebre em várias linhas */
 }
 
 // Filtros de busca
@@ -121,25 +121,25 @@ img {
   max-width: 1400px;
   height: 100px;
   margin: 0 auto;
-  border: 3px solid #009B77;
+  border: 3px solid #009b77;
   border-radius: 30px;
-  padding: 5px;/* Adicione estas duas linhas */
+  padding: 5px; /* Adicione estas duas linhas */
   display: flex;
   align-items: center;
 }
 
 .filtros {
   display: flex;
-  gap: 16px;/* Remova as margens para centralizar */
+  gap: 16px; /* Remova as margens para centralizar */
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 32px;/* Adiciona um espaço de 20 pixels à esquerda */
+  margin-left: 32px; /* Adiciona um espaço de 20 pixels à esquerda */
 }
 
 .filtros input,
 .filtros select {
   background: #fff;
-  border: 2px solid #009B77;
+  border: 2px solid #009b77;
   border-radius: 10px;
   padding: 10px 49px;
   font-size: 1.2rem;
@@ -172,7 +172,7 @@ img {
 .filtro-localizacao-wrapper i {
   position: absolute;
   left: 18px;
-  color: #009B77;
+  color: #009b77;
   font-size: 1.7rem;
   z-index: 2;
 }
@@ -181,9 +181,9 @@ img {
 }
 
 .btn-pesquisar {
-  background: #009B77;
+  background: #009b77;
   color: #fff;
-  border: 2px solid #009B77;
+  border: 2px solid #009b77;
   border-radius: 10px;
   padding: 10px 22px;
   font-size: 1.5rem;
@@ -194,96 +194,79 @@ img {
 
 .btn-pesquisar:hover {
   background: #fff;
-  color: #009B77;
+  color: #009b77;
 }
 
 // Cards de imóveis
-.cards-imoveis {
-  width: 90%;
-  max-width: 1400px;
-  margin: 20px auto;
+.card-imovel {
+  width: 300px;
+  height: 350px;
+  border: 3px solid #009b77;
+  border-radius: 30px;
+  gap: 10px;
+  margin-top: 60px;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
 
-.card-imovel {
-  width: 290px;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #009B77;
-  border-radius: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: #fff;
-}
+  .container-img {
+    width: 250px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ccc;
+    margin-top: 20px;
+    border-radius: 20px;
 
-.card-imovel:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.img-card-imovel {
-  width: 200px;/* A imagem ocupará 100% da largura do seu contêiner pai. */
-  height: 150px;/* A altura da imagem é fixa em 150 pixels. */
-  object-fit: cover;/* A imagem irá preencher a área do elemento (100% de largura e 150px de altura) sem distorcer, cortando as partes que não cabem. */
-  border-radius: 18px 18px 18px 18px;/* Arredonda os cantos superiores (superior-esquerdo e superior-direito) em 18px e mantém os cantos inferiores quadrados (0). */
-}
-
-.imagem-imovel {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #777;
-  border-radius: 18px 18px 0 0;
-  background: #f0f0f0;
+     .img-card-imovel {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+  }
 }
 
 .preco-tipo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #009B77;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    padding: 0 16px 20px 16px;
+    margin-bottom: 2px;
+    line-height: 0.2px;
+  }
 
-.favorito {
-  cursor: pointer;
-  color: #009B77;
-  transition: color 0.2s;
-}
+  .favorito {
+    color: #009b77;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
 
-.favorito:hover {
-  color: #e74c3c;
-}
+  }
 
-.detalhes {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 8px;
-}
+  .detalhes {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    padding: 0 16px 20px 16px;
+    margin-bottom: 1px;
+    line-height: 0.2px;
+  }
 
-.endereco {
-  font-size: 1rem;
-  color: #777;
-  line-height: 1.4;
-}
-
-.sem-imagem {
-  background: #009B77;
-  width: 100%;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #fff;
-  border-radius: 18px 18px 0 0;
-}
+  .endereco {
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    font-weight: bold;
+    padding: 0 16px 20px 16px;
+    margin-bottom: 0;
+    line-height: 25px;
+  }

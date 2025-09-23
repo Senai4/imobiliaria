@@ -55,7 +55,7 @@
     {
       "id": "1",
       "titulo": "Apartamento Moderno",
-      "imagemUrl": "assets/img/apartamento1.png",
+      "imagemUrl": "assets/img/apartamento1.jpg",
       "aluguel": 3500,
       "condominio": 500,
       "iptu": 200,
