@@ -49,22 +49,24 @@
 </div>
 
 <!-- Cards de imóveis -->
+<div class="cards-container">
   <div class="card-imovel" *ngFor="let imovel of imoveis">
     <div class="container-img">
       <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
       <span *ngIf="!imovel.imagemUrl">Imagem</span>
     </div>
-      <div class="preco-tipo">
-        R$ {{ imovel.aluguel | number }} Aluguel
-        <span class="favorito">
-          <i class="far fa-heart"></i>
-        </span>
-      </div>
-      <div class="detalhes">
-        {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
-      </div>
-      <div class="endereco">
-        {{ imovel.endereco }}<br>
-        {{ imovel.cidade }}
-      </div>
+    <div class="preco-tipo">
+      R$ {{ imovel.aluguel | number }} Aluguel
+      <span class="favorito">
+        <i class="far fa-heart"></i>
+      </span>
     </div>
+    <div class="detalhes">
+      {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
+    </div>
+    <div class="endereco">
+      {{ imovel.endereco }}<br>
+      {{ imovel.cidade }}
+    </div>
+  </div>
+</div>
