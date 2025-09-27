@@ -76,6 +76,33 @@ export class MeusInteressesComponent implements OnInit {
     }
   }
 
+  removerFavorito(imovelId: number) {
+    if (!this.userId) return;
+
+    // 1. Encontra o objeto de interesse correspondente ao imovelId
+    const interesseExistente = this.interessesCliente.find(
+      (i: any) => i.imovelId === imovelId
+    );
+
+    if (!interesseExistente || !interesseExistente.id) {
+      console.error('Interesse não encontrado ou sem ID para remoção.');
+      return;
+    }
+
+    // 2. Chama o serviço para remover o interesse
+    this.interesseService.removeInteresse(interesseExistente.id).subscribe({
+      next: () => {
+        console.log(
+          `Interesse ID ${interesseExistente.id} removido com sucesso.`
+        );
+
+        // 3. Recarrega a lista de interesses e a lista de imóveis favoritos
+        this.loadInteresses();
+      },
+      error: (err) => console.error('Erro ao remover interesse:', err),
+    });
+  }
+
   // Carrega interesses do cliente e os imóveis correspondentes
   loadInteresses() {
     if (!this.userId) return;
@@ -85,21 +112,21 @@ export class MeusInteressesComponent implements OnInit {
         this.interessesCliente = res;
         console.log('Interesses recebidos:', this.interessesCliente); // <-- ADICIONE ISSO // Carrega todos os imóveis e filtra os que estão nos interesses
 
-       this.imovelService.getImovel().subscribe({
-         next: (imoveis) => {
-           // Converte a lista de IDs de interesse para Number:
-           const idsFavoritos = this.interessesCliente.map((i) =>
-             Number(i.imovelId)
-           ); // Filtra convertendo o ID do imóvel para Number na comparação:
-           this.imoveisFavoritos = imoveis.filter((i) =>
-             idsFavoritos.includes(Number(i.id))
-           );
-           // **Remova estes console.logs depois de testar!**
-           console.log('Interesses que vieram da API (IDs):', idsFavoritos);
-           console.log('Imóveis que foram carregados:', this.imoveisFavoritos);
-         },
-         error: (err) => console.error('Erro ao carregar imóveis', err),
-       });
+        this.imovelService.getImovel().subscribe({
+          next: (imoveis) => {
+            // Converte a lista de IDs de interesse para Number:
+            const idsFavoritos = this.interessesCliente.map((i) =>
+              Number(i.imovelId)
+            ); // Filtra convertendo o ID do imóvel para Number na comparação:
+            this.imoveisFavoritos = imoveis.filter((i) =>
+              idsFavoritos.includes(Number(i.id))
+            );
+            // **Remova estes console.logs depois de testar!**
+            console.log('Interesses que vieram da API (IDs):', idsFavoritos);
+            console.log('Imóveis que foram carregados:', this.imoveisFavoritos);
+          },
+          error: (err) => console.error('Erro ao carregar imóveis', err),
+        });
       },
       error: (err) => console.error('Erro ao carregar interesses', err),
     });

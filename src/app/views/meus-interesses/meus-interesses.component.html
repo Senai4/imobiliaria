@@ -21,21 +21,39 @@
 </div>
 </div>
 
+<div class="container">
+  <h2>Meus Interesses</h2>
+</div>
+
 <div class="cards-container">
-  <div class="card-imovel" *ngFor="let imovel of imoveisFavoritos">
-    <div class="container-img">
-      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" />
-      <span *ngIf="!imovel.imagemUrl">Imagem</span>
-    </div>
-    <div class="preco-tipo">
-      R$ {{ imovel.aluguel | number }} Aluguel
-    </div>
-    <div class="detalhes">
-      {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
-    </div>
-    <div class="endereco">
-      {{ imovel.endereco }}<br>
-      {{ imovel.cidade }}
-    </div>
+  <div class="card-imovel" *ngFor="let imovel of imoveisFavoritos">
+    <div class="container-img">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
+      <span *ngIf="!imovel.imagemUrl">Imagem</span>
+    </div>
+    <div class="preco-tipo">
+      R$ {{ imovel.aluguel | number }} Aluguel
+      <span class="favorito" (click)="removerFavorito(imovel.id)">
+         <i class="fas fa-heart text-red"></i>
+      </span>
+    </div>
+    <div class="detalhes">
+      {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
+    </div>
+    <div class="endereco">
+      {{ imovel.endereco }}<br>
+      {{ imovel.cidade }}
+    </div>
+  </div>
+  <div *ngIf="imoveisFavoritos.length === 0" class="mensagem-vazio">
+      <p>Você ainda não possui imóveis favoritos.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="icons">
+    <i class="fa-brands fa-google"></i>
+    <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+    <i class="fa-brands fa-linkedin"></i>
   </div>
 </div>
