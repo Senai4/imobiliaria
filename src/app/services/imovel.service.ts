@@ -7,6 +7,7 @@ import { Imovel } from '../models/imovel.model';
   providedIn: 'root',
 })
 export class ImovelService {
+  [x: string]: any;
   //atributos - endereço da api
   private apiUrl = 'http://localhost:3006/imovel'; //caminho para API
 

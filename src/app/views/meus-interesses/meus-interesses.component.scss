@@ -5,13 +5,14 @@
 .navbar {
   width: 100%;
   height: 80px;
-  background-color: #009B77;
+  background-color: #009b77;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
   position: relative;
   /* necessário para o menu absoluto */
+  margin-bottom: 32px;
 }
 
 /* Ícone do hambúrguer */
@@ -31,7 +32,7 @@
   top: 10px;
   left: 10px;
   width: 300px;
-  background-color: #009B77;
+  background-color: #009b77;
   border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -68,28 +69,29 @@
 }
 
 .menu a:hover {
-  color: #009B77;
+  color: #009b77;
 }
 
 .logo {
   margin-left: 10px;
-}
 
-img {
-  max-width: 18%;
-  height: auto;
-  padding: 0rem 0rem 0rem 0rem;
+  img {
+    max-width: 18%;
+    height: auto;
+    padding: 0rem 0rem 0rem 0rem;
+  }
 }
 
 /* Media query para telas menores (ex: metade de 1920px ≈ 960px) */
 @media (max-width: 960px) {
   .logo img {
-    max-width: 55%;
-    padding: 1rem 0rem 0rem 0rem;
+    max-width: 35%;
+    padding: 0rem 0rem 0rem 0rem;
   }
 
   .user {
     padding: 0rem 0rem 0rem 0rem;
+
     font-size: 61px;
   }
 }
@@ -116,3 +118,114 @@ img {
   white-space: nowrap;
   /* Impede que o nome quebre em várias linhas */
 }
+
+// Cards de imóveis
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* Diminui o espaçamento entre os cards */
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.card-imovel {
+  /* Recalcula a largura para 4 cards por linha com o novo espaçamento */
+  flex-basis: calc(25% - 52px);
+  height: auto;
+  border: 3px solid #009b77;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-imovel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-img {
+  width: 250px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  margin-top: 20px;
+  border-radius: 20px;
+
+  .img-card-imovel {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+  }
+}
+
+.preco-tipo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 0 16px 10px 16px;
+  margin-bottom: 2px;
+  line-height: 0.2px;
+}
+
+.favorito {
+  color: #009b77;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+
+
+  /* Estilo para o ícone de coração preenchido */
+  .favorito i {
+    transition: color 0.2s;
+    /* Transição para a cor */
+  }
+
+  .favorito.ativo i {
+    color: #009b77;
+    font-weight: 900;
+  }
+}
+
+.detalhes {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 0 16px 20px 16px;
+  margin-bottom: 1px;
+  line-height: 0.2px;
+}
+
+.endereco {
+  width: 100%;
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+  padding: 0 16px 1rem 16px;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+
+@media (max-width: 960px) {
+  .card-imovel {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }

@@ -4,9 +4,10 @@ export interface CaracteristicasImovel {
 }
 
 export class Imovel {
+[x: string]: any;
 total: string | number | undefined;
   constructor(
-    public id: string,
+    public id: number,
     public titulo: string,
     public corretorId: string,
     public tipo: 'Apartamento' | 'Casa' | 'Terreno',

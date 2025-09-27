@@ -57,8 +57,8 @@
     </div>
     <div class="preco-tipo">
       R$ {{ imovel.aluguel | number }} Aluguel
-      <span class="favorito">
-        <i class="far fa-heart"></i>
+      <span class="favorito" (click)="toggleFavorito(imovel.id)">
+          <i [ngClass]="isFavorito(imovel.id) ? 'fas fa-heart text-red' : 'far fa-heart'"></i>
       </span>
     </div>
     <div class="detalhes">

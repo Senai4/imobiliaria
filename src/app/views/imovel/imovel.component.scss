@@ -266,7 +266,7 @@
   margin-left: 8px;
   display: flex;
   align-items: center;
-}
+
 
 /* Estilo para o ícone de coração preenchido */
 .favorito i {
@@ -276,6 +276,7 @@
 .favorito.ativo i {
   color: #009b77;
   font-weight: 900;
+}
 }
 
 .detalhes {

@@ -50,7 +50,6 @@
       "perfil": "usuario"
     }
   ],
-
   "imovel": [
     {
       "id": "1",
@@ -76,173 +75,210 @@
       "descricao": "Apartamento moderno, bem localizado, próximo ao comércio.",
       "corretorId": "2"
     },
-       {
-         "id": "2",
-         "titulo": "Casa Aconchegante",
-         "imagemUrl": "assets/img/casa1.jpg",
-         "aluguel": 2800,
-         "condominio": 0,
-         "iptu": 150,
-         "seguroIncendio": 80,
-         "taxaServico": 0,
-         "total": 3030,
-         "caracteristicas": {
-           "quartos": 3,
-           "banheiros": 1,
-           "tamanho": 80,
-           "vagas": 2,
-           "mobilia": "Não",
-           "pet": "Aceita"
-         },
-         "endereco": "Avenida Brasil, Centro",
-         "cidade": "São Paulo",
-         "tipoImovel": "Casa",
-         "descricao": "Casa de vila aconchegante, ideal para família, com quintal.",
-         "corretorId": "1"
-       },
-       {
-         "id": "3",
-         "titulo": "Studio Compacto",
-         "imagemUrl": "assets/img/studio1.jpg",
-         "aluguel": 1800,
-         "condominio": 300,
-         "iptu": 50,
-         "seguroIncendio": 40,
-         "taxaServico": 30,
-         "total": 2180,
-         "caracteristicas": {
-           "quartos": 1,
-           "banheiros": 1,
-           "tamanho": 35,
-           "vagas": 0,
-           "mobilia": "Sim",
-           "pet": "Não aceita"
-         },
-         "endereco": "Rua da Consolação, Consolação",
-         "cidade": "São Paulo",
-         "tipoImovel": "Apartamento",
-         "descricao": "Studio moderno, perfeito para estudantes ou solteiros, próximo a transporte público.",
-         "corretorId": "3"
-       },
-       {
-         "id": "4",
-         "titulo": "Cobertura Luxuosa",
-         "imagemUrl": "assets/img/cobertura1.jpg",
-         "aluguel": 8500,
-         "condominio": 1200,
-         "iptu": 400,
-         "seguroIncendio": 250,
-         "taxaServico": 150,
-         "total": 10500,
-         "caracteristicas": {
-           "quartos": 4,
-           "banheiros": 4,
-           "tamanho": 150,
-           "vagas": 3,
-           "mobilia": "Sim",
-           "pet": "Aceita"
-         },
-         "endereco": "Rua Oscar Freire, Jardim Paulista",
-         "cidade": "São Paulo",
-         "tipoImovel": "Cobertura",
-         "descricao": "Cobertura de alto padrão com vista panorâmica e piscina privativa.",
-         "corretorId": "1"
-       },
-       {
-         "id": "5",
-         "titulo": "Apartamento com Varanda",
-         "imagemUrl": "assets/img/apartamento2.jpg",
-         "aluguel": 4200,
-         "condominio": 600,
-         "iptu": 250,
-         "seguroIncendio": 120,
-         "taxaServico": 80,
-         "total": 5250,
-         "caracteristicas": {
-           "quartos": 3,
-           "banheiros": 2,
-           "tamanho": 75,
-           "vagas": 1,
-           "mobilia": "Não",
-           "pet": "Aceita"
-         },
-         "endereco": "Rua Barão de Ipanema, Copacabana",
-         "cidade": "Rio de Janeiro",
-         "tipoImovel": "Apartamento",
-         "descricao": "Apartamento espaçoso com varanda, em prédio familiar e seguro.",
-         "corretorId": "2"
-       },
-       {
-         "id": "6",
-         "titulo": "Kitnet para Alugar",
-         "imagemUrl": "assets/img/kitnet1.jpg",
-         "aluguel": 1200,
-         "condominio": 150,
-         "iptu": 30,
-         "seguroIncendio": 25,
-         "taxaServico": 15,
-         "total": 1420,
-         "caracteristicas": {
-           "quartos": 1,
-           "banheiros": 1,
-           "tamanho": 25,
-           "vagas": 0,
-           "mobilia": "Não",
-           "pet": "Não aceita"
-         },
-         "endereco": "Rua do Catete, Catete",
-         "cidade": "Rio de Janeiro",
-         "tipoImovel": "Apartamento",
-         "descricao": "Kitnet simples e funcional, próximo ao metrô, ideal para quem busca praticidade.",
-         "corretorId": "3"
-       },
-       {
-    "id": "2",
-    "titulo": "Amplo Apartamento no Centro",
-    "imagemUrl": "assets/img/apartamento2.jpg",
-    "aluguel": 2800,
-    "condominio": 700,
-    "iptu": 150,
-    "seguroIncendio": 80,
-    "taxaServico": 40,
-    "total": 3170,
-    "caracteristicas": {
-      "quartos": 3,
-      "banheiros": 2,
-      "tamanho": 80,
-      "vagas": 0,
-      "mobilia": "Não",
-      "pet": "Aceita"
+    {
+      "id": "2",
+      "titulo": "Casa Aconchegante",
+      "imagemUrl": "assets/img/casa1.jpg",
+      "aluguel": 2800,
+      "condominio": 0,
+      "iptu": 150,
+      "seguroIncendio": 80,
+      "taxaServico": 0,
+      "total": 3030,
+      "caracteristicas": {
+        "quartos": 3,
+        "banheiros": 1,
+        "tamanho": 80,
+        "vagas": 2,
+        "mobilia": "Não",
+        "pet": "Aceita"
+      },
+      "endereco": "Avenida Brasil, Centro",
+      "cidade": "São Paulo",
+      "tipoImovel": "Casa",
+      "descricao": "Casa de vila aconchegante, ideal para família, com quintal.",
+      "corretorId": "1"
     },
-    "endereco": "Avenida Brasil, Centro",
-    "cidade": "São Paulo",
-    "tipoImovel": "Apartamento",
-    "descricao": "Apartamento espaçoso, ideal para famílias, com fácil acesso ao transporte público.",
-    "corretorId": "1"
-  },
-  {
-    "id": "3",
-    "titulo": "Studio Confortável e Compacto",
-    "imagemUrl": "assets/img/studio3.jpg",
-    "aluguel": 1800,
-    "condominio": 450,
-    "iptu": 50,
-    "seguroIncendio": 50,
-    "taxaServico": 20,
-    "total": 2020,
-    "caracteristicas": {
-      "quartos": 1,
-      "banheiros": 1,
-      "tamanho": 35,
-      "vagas": 0,
-      "mobilia": "Sim",
-      "pet": "Não Aceita"
+    {
+      "id": "3",
+      "titulo": "Studio Compacto",
+      "imagemUrl": "assets/img/studio1.jpg",
+      "aluguel": 1800,
+      "condominio": 300,
+      "iptu": 50,
+      "seguroIncendio": 40,
+      "taxaServico": 30,
+      "total": 2180,
+      "caracteristicas": {
+        "quartos": 1,
+        "banheiros": 1,
+        "tamanho": 35,
+        "vagas": 0,
+        "mobilia": "Sim",
+        "pet": "Não aceita"
+      },
+      "endereco": "Rua da Consolação, Consolação",
+      "cidade": "São Paulo",
+      "tipoImovel": "Apartamento",
+      "descricao": "Studio moderno, perfeito para estudantes ou solteiros, próximo a transporte público.",
+      "corretorId": "3"
     },
-    "endereco": "Rua da Consolação, Consolação",
-    "cidade": "São Paulo",
-    "tipoImovel": "Studio",
-    "descricao": "Studio funcional e mobiliado, perfeito para estudantes ou profissionais solteiros.",
-    "corretorId": "3"
-  }
-     ]
+    {
+      "id": "4",
+      "titulo": "Cobertura Luxuosa",
+      "imagemUrl": "assets/img/cobertura1.jpg",
+      "aluguel": 8500,
+      "condominio": 1200,
+      "iptu": 400,
+      "seguroIncendio": 250,
+      "taxaServico": 150,
+      "total": 10500,
+      "caracteristicas": {
+        "quartos": 4,
+        "banheiros": 4,
+        "tamanho": 150,
+        "vagas": 3,
+        "mobilia": "Sim",
+        "pet": "Aceita"
+      },
+      "endereco": "Rua Oscar Freire, Jardim Paulista",
+      "cidade": "São Paulo",
+      "tipoImovel": "Cobertura",
+      "descricao": "Cobertura de alto padrão com vista panorâmica e piscina privativa.",
+      "corretorId": "1"
+    },
+    {
+      "id": "5",
+      "titulo": "Apartamento com Varanda",
+      "imagemUrl": "assets/img/apartamento2.jpg",
+      "aluguel": 4200,
+      "condominio": 600,
+      "iptu": 250,
+      "seguroIncendio": 120,
+      "taxaServico": 80,
+      "total": 5250,
+      "caracteristicas": {
+        "quartos": 3,
+        "banheiros": 2,
+        "tamanho": 75,
+        "vagas": 1,
+        "mobilia": "Não",
+        "pet": "Aceita"
+      },
+      "endereco": "Rua Barão de Ipanema, Copacabana",
+      "cidade": "Rio de Janeiro",
+      "tipoImovel": "Apartamento",
+      "descricao": "Apartamento espaçoso com varanda, em prédio familiar e seguro.",
+      "corretorId": "2"
+    },
+    {
+      "id": "6",
+      "titulo": "Kitnet para Alugar",
+      "imagemUrl": "assets/img/kitnet1.jpg",
+      "aluguel": 1200,
+      "condominio": 150,
+      "iptu": 30,
+      "seguroIncendio": 25,
+      "taxaServico": 15,
+      "total": 1420,
+      "caracteristicas": {
+        "quartos": 1,
+        "banheiros": 1,
+        "tamanho": 25,
+        "vagas": 0,
+        "mobilia": "Não",
+        "pet": "Não aceita"
+      },
+      "endereco": "Rua do Catete, Catete",
+      "cidade": "Rio de Janeiro",
+      "tipoImovel": "Apartamento",
+      "descricao": "Kitnet simples e funcional, próximo ao metrô, ideal para quem busca praticidade.",
+      "corretorId": "3"
+    },
+    {
+      "id": "7",
+      "titulo": "Amplo Apartamento no Centro",
+      "imagemUrl": "assets/img/apartamento2.jpg",
+      "aluguel": 2800,
+      "condominio": 700,
+      "iptu": 150,
+      "seguroIncendio": 80,
+      "taxaServico": 40,
+      "total": 3170,
+      "caracteristicas": {
+        "quartos": 3,
+        "banheiros": 2,
+        "tamanho": 80,
+        "vagas": 0,
+        "mobilia": "Não",
+        "pet": "Aceita"
+      },
+      "endereco": "Avenida Brasil, Centro",
+      "cidade": "São Paulo",
+      "tipoImovel": "Apartamento",
+      "descricao": "Apartamento espaçoso, ideal para famílias, com fácil acesso ao transporte público.",
+      "corretorId": "1"
+    },
+    {
+      "id": "8",
+      "titulo": "Studio Confortável e Compacto",
+      "imagemUrl": "assets/img/studio3.jpg",
+      "aluguel": 1800,
+      "condominio": 450,
+      "iptu": 50,
+      "seguroIncendio": 50,
+      "taxaServico": 20,
+      "total": 2020,
+      "caracteristicas": {
+        "quartos": 1,
+        "banheiros": 1,
+        "tamanho": 35,
+        "vagas": 0,
+        "mobilia": "Sim",
+        "pet": "Não Aceita"
+      },
+      "endereco": "Rua da Consolação, Consolação",
+      "cidade": "São Paulo",
+      "tipoImovel": "Studio",
+      "descricao": "Studio funcional e mobiliado, perfeito para estudantes ou profissionais solteiros.",
+      "corretorId": "3"
+    }
+  ],
+  "interesses": [
+    {
+      "id": "1",
+      "clienteId": 2,
+      "imovelId": 1
+    },
+    {
+      "id": "3f74",
+      "clienteId": "2",
+      "imovelId": "1"
+    },
+    {
+      "id": "7658",
+      "clienteId": "40ec",
+      "imovelId": "2"
+    },
+    {
+      "id": "731c",
+      "clienteId": "406c",
+      "imovelId": "4"
+    },
+    {
+      "id": "d5d9",
+      "clienteId": "40ec",
+      "imovelId": "6"
+    },
+    {
+      "id": "fe63",
+      "clienteId": "40ec",
+      "imovelId": "7"
+    },
+    {
+      "id": "dff5",
+      "clienteId": "40ec",
+      "imovelId": "5"
+    }
+  ]
 }
