@@ -195,6 +195,54 @@
          "tipoImovel": "Apartamento",
          "descricao": "Kitnet simples e funcional, próximo ao metrô, ideal para quem busca praticidade.",
          "corretorId": "3"
-       }
+       },
+       {
+    "id": "2",
+    "titulo": "Amplo Apartamento no Centro",
+    "imagemUrl": "assets/img/apartamento2.jpg",
+    "aluguel": 2800,
+    "condominio": 700,
+    "iptu": 150,
+    "seguroIncendio": 80,
+    "taxaServico": 40,
+    "total": 3170,
+    "caracteristicas": {
+      "quartos": 3,
+      "banheiros": 2,
+      "tamanho": 80,
+      "vagas": 0,
+      "mobilia": "Não",
+      "pet": "Aceita"
+    },
+    "endereco": "Avenida Brasil, Centro",
+    "cidade": "São Paulo",
+    "tipoImovel": "Apartamento",
+    "descricao": "Apartamento espaçoso, ideal para famílias, com fácil acesso ao transporte público.",
+    "corretorId": "1"
+  },
+  {
+    "id": "3",
+    "titulo": "Studio Confortável e Compacto",
+    "imagemUrl": "assets/img/studio3.jpg",
+    "aluguel": 1800,
+    "condominio": 450,
+    "iptu": 50,
+    "seguroIncendio": 50,
+    "taxaServico": 20,
+    "total": 2020,
+    "caracteristicas": {
+      "quartos": 1,
+      "banheiros": 1,
+      "tamanho": 35,
+      "vagas": 0,
+      "mobilia": "Sim",
+      "pet": "Não Aceita"
+    },
+    "endereco": "Rua da Consolação, Consolação",
+    "cidade": "São Paulo",
+    "tipoImovel": "Studio",
+    "descricao": "Studio funcional e mobiliado, perfeito para estudantes ou profissionais solteiros.",
+    "corretorId": "3"
+  }
      ]
 }
