@@ -24,6 +24,8 @@ export class ImovelComponent implements OnInit {
 
   @ViewChild('menu') menuElement!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
+isInteresse: any;
+toggleInteresse: any;
 
   constructor(
     public authService: AuthService,
