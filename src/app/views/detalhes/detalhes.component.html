@@ -1,58 +1,73 @@
-<div class="detalhes-container" *ngIf="imovelDetalhado">
+<div class="navbar">
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="Logo">
+  </div>
 
-  <div class="header-content">
+  <div class="user">
+    <i class="fas fa-user-circle"></i>
+    <span class="user-name" *ngIf="authService.currentUser$ | async as user">
+      {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+    </span>
+  </div>
+</div>
 
-    <div class="galeria-imovel">
-      <img [src]="imovelDetalhado.imagemUrl" alt="Foto Principal" class="foto-principal">
-      <div class="miniaturas">
+<!-- Container com Informações -->
+<div class="container" *ngIf="imovelDetalhado">
+  <div class="container-card">
+    <div class="container-img">
+      <img [src]="imovelDetalhado.imagemUrl" alt="Imagem" class="img-foto-principal">
+      <div class="miniatura">
       </div>
     </div>
 
-    <div class="info-contato-sidebar">
-      <h1>{{ imovelDetalhado.titulo }}</h1>
-      <p class="endereco">{{ imovelDetalhado.endereco }}, {{ imovelDetalhado.cidade }}</p>
-      <p class="preco">R$ {{ imovelDetalhado.aluguel | number:'1.2-2' }} / mês</p>
+    <div class="informacoes">
+      <span class="label">Aluguel:</span>
+      <p class="preco">R$ {{ imovelDetalhado.aluguel | number:'1.2-2' }}</p>
+      <span class="label">Condominio:</span>
+      <p class="condominio">R$ {{ imovelDetalhado.condominio | number:'1.2-2' }}</p>
+      <span class="label">IPTU:</span>
+      <p class="iptu">R$ {{ imovelDetalhado.iptu | number:'1.2-2' }}</p>
+      <span class="label">Seguro Incêndio:</span>
+      <p class="seguro">R$ {{ imovelDetalhado.seguroincendio | number:'1.2-2' }}</p>
+      <span class="label">Taxa de Serviço:</span>
+      <p class="servico">R$ {{ imovelDetalhado.taxaservico | number:'1.2-2' }}</p>
+      <span class="label">Total:</span>
+      <p class="total">R$ {{ imovelDetalhado.total | number:'1.2-2' }}</p>
 
-      <div class="botoes-acao">
-        <button class="btn-contato">ENTRAR EM CONTATO</button>
+      <div class="favorite">
         <button class="btn-favorito">
           <i class="far fa-heart"></i>
         </button>
       </div>
     </div>
-
   </div>
-  <div class="corpo-detalhes">
 
-    <div class="caracteristicas-principais">
-      <div class="item-caracteristica">
-        <i class="fas fa-bed"></i>
-        <span>{{ imovelDetalhado.caracteristicas.quartos }} Quartos</span>
-      </div>
-      <div class="item-caracteristica">
-        <i class="fas fa-bath"></i>
-        <span>{{ imovelDetalhado.caracteristicas.banheiros }} Banheiros</span>
-      </div>
-      <div class="item-caracteristica">
-        <i class="fas fa-expand-alt"></i>
-        <span>{{ imovelDetalhado.caracteristicas.tamanho }} m²</span>
-      </div>
-    </div>
+  <div class="detalhes">
 
-    <div class="descricao-completa">
-      <h2>Descrição do Imóvel</h2>
-      <p>{{ imovelDetalhado.descricao }}</p>
+  <div class="caracteristicas-principais">
+    <div class="item-caracteristica">
+      <i class="fas fa-bed"></i>
+      <span>{{ imovelDetalhado.caracteristicas.quartos }} Quartos</span>
     </div>
+    <div class="item-caracteristica">
+      <i class="fas fa-bath"></i>
+      <span>{{ imovelDetalhado.caracteristicas.banheiros }} Banheiros</span>
+    </div>
+    <div class="item-caracteristica">
+      <i class="fas fa-expand-alt"></i>
+      <span>{{ imovelDetalhado.caracteristicas.tamanho }} m²</span>
+    </div>
+  </div>
 
-    <div class="localizacao-mapa">
-      <h2>Localização</h2>
-      <div id="map-placeholder">Mapa da região vai aqui.</div>
-    </div>
+  <div class="descricao-completa">
+    <h2>Descrição do Imóvel</h2>
+    <p>{{ imovelDetalhado.descricao }}</p>
+  </div>
 
   </div>
 
-</div>
+  </div>
 
-<div *ngIf="!imovelDetalhado">
-  Carregando detalhes do imóvel...
-</div>
+  <div *ngIf="!imovelDetalhado">
+    Carregando detalhes do imóvel...
+  </div>

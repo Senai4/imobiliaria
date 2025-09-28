@@ -11,15 +11,14 @@
   justify-content: flex-start;
   padding: 0 20px;
   position: relative;
-  /* necessário para o menu absoluto */
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .logo {
-  margin-left: 10px;
+  margin-left: 0;
 
   img {
-    max-width: 18%;
+    max-width: 20%;
     height: auto;
     padding: 0rem 0rem 0rem 0rem;
   }
@@ -60,4 +59,91 @@
   padding-left: 10%;
   white-space: nowrap;
   /* Impede que o nome quebre em várias linhas */
+}
+
+.container {
+  width: 1300px;
+  height: 580px;
+  margin-left: 120px;
+}
+
+ .container-card {
+   width: 750px;
+   height: 550px;
+   //background-color: #ccc;
+   position: relative;
+ }
+
+.container-img {
+  width: 500px;
+  height: 550px;
+  background-color: #ccc;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-left: 790px;
+  overflow: hidden;
+
+  .img-foto-principal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    display: block;
+  }
+}
+
+.informacoes {
+  width: 95%;
+  height: 120px;
+  border: 2px solid #009b77;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px 10px;
+  padding: 15px 15px;
+  position: absolute;
+  bottom: 405px;
+  left: 0;
+  z-index: 10;
+  margin-left: 18px;
+}
+
+.label {
+  font-weight: normal;
+  color: #009b77;
+  font-size: 18px;
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+.informacoes p {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  width: auto;
+}
+
+.informacoes .total .label,
+.informacoes .total {
+  color: #009b77;
+  font-weight: bold;
+}
+
+.informacoes .favorite {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.informacoes .favorite .btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -3px;
+}
+
+.informacoes .favorite .btn-favorito i {
+  color: #009b77;
+  font-size: 24px;
 }

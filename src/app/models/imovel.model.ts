@@ -21,6 +21,10 @@ total: string | number | undefined;
     public descricao: string,
     public endereco: string,
     public imagemUrl: string,
+    public condominio: string,
+    public iptu: string,
+    public seguroincendio: string,
+    public taxaservico: string,
     public caracteristicas: CaracteristicasImovel
   ) {}
 }

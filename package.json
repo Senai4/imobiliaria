@@ -20,6 +20,7 @@
     "@angular/router": "^16.2.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.8.0",
+    "sass": "^1.93.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

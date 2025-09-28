@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'home', component: HomeComponent },
   { path: 'detalhes/:id', component: DetalhesComponent },
+  
 ];
 
 @NgModule({

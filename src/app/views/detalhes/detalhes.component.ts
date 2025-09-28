@@ -22,7 +22,6 @@ export class DetalhesComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    // A lógica de carregamento do imóvel detalhado permanece a mesma.
     this.routeSubscription = this.route.paramMap.subscribe(params => {
       const anuncioId: string | null = params.get('id');
 
@@ -35,11 +34,6 @@ export class DetalhesComponent implements OnInit, OnDestroy {
         });
       }
     });
-
-    // Você não precisa repetir a lógica de subscrição do usuário (isLoggedIn, userName, etc.)
-    // que estava no outro componente, pois a navegação já acessa o `authService.currentUser$`
-    // DIRETAMENTE no seu template HTML, como você fez:
-    // <div class="user" *ngIf="authService.currentUser$ | async as user">
   }
 
   ngOnDestroy(): void {
@@ -47,6 +41,4 @@ export class DetalhesComponent implements OnInit, OnDestroy {
       this.routeSubscription.unsubscribe();
     }
   }
-
-  // Se você precisa de outras lógicas (ex: toggleFavorito) no futuro, adicione-as aqui.
 }
