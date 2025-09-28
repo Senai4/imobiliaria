@@ -14,6 +14,7 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DetalhesComponent } from './views/detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     CorretoresComponent,
     FooterComponent,
     HeaderComponent,
+    DetalhesComponent,
   ],
   imports: [
     BrowserModule,

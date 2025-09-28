@@ -6,6 +6,7 @@ import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { LoginComponent } from './views/login/login.component';
 import { MeusInteressesComponent } from './views/meus-interesses/meus-interesses.component';
 import { CorretoresComponent } from './views/corretores/corretores.component';
+import { DetalhesComponent } from './views/detalhes/detalhes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'corretores', component: CorretoresComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'detalhes/:id', component: DetalhesComponent },
 ];
 
 @NgModule({

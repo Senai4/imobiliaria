@@ -16,7 +16,6 @@ export class ImovelService {
 
   //métodos de Conexão
   //GET -> obtem a Lista de Imoveis a partir da API
-  //nomeDométodo
   getImovel(): Observable<Imovel[]> {
     //biblioteca da rxjs -> traduz os dados da API <=> obj
     return this.http.get<Imovel[]>(this.apiUrl);
@@ -39,4 +38,11 @@ export class ImovelService {
     const apiUrlFinal = `${this.apiUrl}/${id}`;
     return this.http.delete<Imovel[]>(apiUrlFinal);
   }
+
+  getImovelById(id: string): Observable<Imovel> {
+    const apiUrlFinal = `${this.apiUrl}/${id}`;
+    return this.http.get<Imovel>(apiUrlFinal);
 }
+}
+
+export { Imovel };

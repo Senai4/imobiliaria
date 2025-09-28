@@ -1,0 +1,58 @@
+<div class="detalhes-container" *ngIf="imovelDetalhado">
+
+  <div class="header-content">
+
+    <div class="galeria-imovel">
+      <img [src]="imovelDetalhado.imagemUrl" alt="Foto Principal" class="foto-principal">
+      <div class="miniaturas">
+      </div>
+    </div>
+
+    <div class="info-contato-sidebar">
+      <h1>{{ imovelDetalhado.titulo }}</h1>
+      <p class="endereco">{{ imovelDetalhado.endereco }}, {{ imovelDetalhado.cidade }}</p>
+      <p class="preco">R$ {{ imovelDetalhado.aluguel | number:'1.2-2' }} / mês</p>
+
+      <div class="botoes-acao">
+        <button class="btn-contato">ENTRAR EM CONTATO</button>
+        <button class="btn-favorito">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div class="corpo-detalhes">
+
+    <div class="caracteristicas-principais">
+      <div class="item-caracteristica">
+        <i class="fas fa-bed"></i>
+        <span>{{ imovelDetalhado.caracteristicas.quartos }} Quartos</span>
+      </div>
+      <div class="item-caracteristica">
+        <i class="fas fa-bath"></i>
+        <span>{{ imovelDetalhado.caracteristicas.banheiros }} Banheiros</span>
+      </div>
+      <div class="item-caracteristica">
+        <i class="fas fa-expand-alt"></i>
+        <span>{{ imovelDetalhado.caracteristicas.tamanho }} m²</span>
+      </div>
+    </div>
+
+    <div class="descricao-completa">
+      <h2>Descrição do Imóvel</h2>
+      <p>{{ imovelDetalhado.descricao }}</p>
+    </div>
+
+    <div class="localizacao-mapa">
+      <h2>Localização</h2>
+      <div id="map-placeholder">Mapa da região vai aqui.</div>
+    </div>
+
+  </div>
+
+</div>
+
+<div *ngIf="!imovelDetalhado">
+  Carregando detalhes do imóvel...
+</div>

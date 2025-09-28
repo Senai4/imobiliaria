@@ -26,7 +26,7 @@
 </div>
 
 <div class="cards-container">
-  <div class="card-imovel" *ngFor="let imovel of imoveisFavoritos">
+  <div class="card-imovel" *ngFor="let imovel of imoveisFavoritos" [routerLink]="['/detalhes', imovel.id]">
     <div class="container-img">
       <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
       <span *ngIf="!imovel.imagemUrl">Imagem</span>

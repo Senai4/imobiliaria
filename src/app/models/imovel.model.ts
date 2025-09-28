@@ -1,6 +1,10 @@
 export interface CaracteristicasImovel {
   quartos: number;
+  banheiros: number;
   tamanho: number;
+  vagas: number;
+  mobilia: string;
+  pet: string;
 }
 
 export class Imovel {
