@@ -1,4 +1,3 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -21,7 +20,7 @@ export class LoginComponent {
   exibirMensagemDeErro(mensagem: string, duracao = 2000) {
     this.mensagemErro = mensagem;
 
-    // Configura um temporizador para limpar a mensagem após a duração especificada
+    //temporizador para limpar a mensagem após a duração especificada
     setTimeout(() => {
       this.mensagemErro = '';
     }, duracao);

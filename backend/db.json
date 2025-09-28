@@ -256,46 +256,6 @@
       "imovelId": "1"
     },
     {
-      "id": "087e",
-      "clienteId": "40ec",
-      "imovelId": "1"
-    },
-    {
-      "id": "db8c",
-      "clienteId": "40ec",
-      "imovelId": "2"
-    },
-    {
-      "id": "46e1",
-      "clienteId": "40ec",
-      "imovelId": "3"
-    },
-    {
-      "id": "1cda",
-      "clienteId": "40ec",
-      "imovelId": "4"
-    },
-    {
-      "id": "9a5c",
-      "clienteId": "40ec",
-      "imovelId": "5"
-    },
-    {
-      "id": "8a8d",
-      "clienteId": "40ec",
-      "imovelId": "6"
-    },
-    {
-      "id": "98b9",
-      "clienteId": "40ec",
-      "imovelId": "7"
-    },
-    {
-      "id": "c3b7",
-      "clienteId": "40ec",
-      "imovelId": "8"
-    },
-    {
       "id": "ab3b",
       "clienteId": "406c",
       "imovelId": "1"
@@ -314,6 +274,26 @@
       "id": "bd05",
       "clienteId": "406c",
       "imovelId": "8"
+    },
+    {
+      "id": "c3ca",
+      "clienteId": "40ec",
+      "imovelId": "1"
+    },
+    {
+      "id": "f3a8",
+      "clienteId": "40ec",
+      "imovelId": "2"
+    },
+    {
+      "id": "3e77",
+      "clienteId": "40ec",
+      "imovelId": "3"
+    },
+    {
+      "id": "d78d",
+      "clienteId": "40ec",
+      "imovelId": "4"
     }
   ]
 }

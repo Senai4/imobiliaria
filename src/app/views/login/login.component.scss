@@ -1,4 +1,3 @@
-// Ícone de seta para home no canto superior esquerdo
 .voltar-home {
   position: absolute;
   top: 30px;
@@ -28,7 +27,7 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #009B77; // cor desejada
+  background-color: #009B77;
 }
 
 .container {
@@ -49,7 +48,7 @@ p {
   font-size: 5.9rem;
   line-height: 1.6;
   text-align: center;
-  padding: 0rem 2rem 2rem 2rem; // padding-top menor
+  padding: 0rem 2rem 2rem 2rem;
 
   @media (max-width: 800px) {
     font-size: 5.9rem;
@@ -151,30 +150,20 @@ h1 {
   }
 }
 
-/* login.component.scss */
 .mensagem-erro {
   position: absolute;
-  /* Posição absoluta em relação ao elemento pai */
   top: 2%;
-  /* Ajuste a porcentagem para mover para cima ou para baixo */
   left: 74%;
-  /* Centraliza horizontalmente */
   transform: translateX(-145%);
-  /* Alinha ao centro com base na largura do elemento */
-
-  /* Estilos visuais para a caixa de mensagem */
   background-color: #f4f4f4;
   color: black;
   border: 1px solid #f4f4f4;
   border-radius: 4px;
   padding: 15px;
   z-index: 1000;
-  /* Garante que a mensagem fique na frente de outros elementos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 70%;
-  /* Adaptação para telas menores */
   max-width: 350px;
-  /* Limita a largura máxima */
   text-align: center;
 }
 

@@ -19,18 +19,30 @@ import {
   styleUrls: ['./imovel.component.scss'],
 })
 export class ImovelComponent implements OnInit {
+  // Variáveis
   menuAtivo = false;
   isLoggedIn = false;
   userName = '';
   isAdmin = false;
+  filtroAtivo: boolean = false;
 
-  imoveis: Imovel[] = [];
+  // Imóveis: lista original (limpa) e lista filtrada (visível)
+  // Nota: Usamos 'any' temporariamente aqui para contornar o Index Signature do modelo
+  imoveisOriginais: any[] = [];
+  imoveis: any[] = [];
+
   interessesCliente: Interesse[] = [];
   userId!: number;
 
   @ViewChild('menu') menuElement!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
   router: any;
+
+  //VARIÁVEIS DO FILTRO
+  localizacao: string = '';
+  tipoNegocio: string = 'Alugar';
+  valor: string = 'Valor';
+  tipoImovel: string = 'Tipo de Imóvel';
 
   constructor(
     public authService: AuthService,
@@ -39,15 +51,13 @@ export class ImovelComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Observa login do usuário
+    // Lógica de autenticação e carregamento de interesses
     this.authService.currentUser$.subscribe((user) => {
       this.isLoggedIn = !!user;
       if (this.isLoggedIn && user) {
         this.userName = user.nome;
         this.isAdmin = user.perfil === 'admin';
         this.userId = user.id as any;
-
-        // Carrega interesses do cliente
         this.interesseService
           .getInteressesByCliente(this.userId)
           .subscribe((res) => (this.interessesCliente = res));
@@ -59,10 +69,70 @@ export class ImovelComponent implements OnInit {
       }
     });
 
-    // Carrega imóveis
-    this.imovelService.getImovel().subscribe((dados) => (this.imoveis = dados));
+    this.carregarImoveis();
   }
 
+  carregarImoveis(): void {
+    this.imovelService.getImovel().subscribe((dados) => {
+      // Limpeza de objetos nulos/undefineds
+      const dadosLimpos = dados.filter(item => item !== null && item !== undefined);
+
+      this.imoveisOriginais = dadosLimpos;
+      this.imoveis = dadosLimpos;
+      console.log('Imóveis originais carregados e limpos. Total:', this.imoveisOriginais.length);
+    });
+  }
+
+  realizarPesquisa(): void {
+    const localizacaoAtiva = this.localizacao && this.localizacao.trim() !== '';
+    const valorAtivo = this.valor !== 'Valor';
+    const tipoImovelAtivo = this.tipoImovel !== 'Tipo de Imóvel';
+
+    this.filtroAtivo = localizacaoAtiva || valorAtivo || tipoImovelAtivo;
+
+
+    let listaFiltrada = this.imoveisOriginais.filter(imovel => imovel !== null && imovel !== undefined) as any[];
+
+    if (!this.filtroAtivo) {
+        this.imoveis = [...this.imoveisOriginais];
+        console.log('Nenhum filtro ativo. Exibindo todos os imóveis.');
+        return;
+    }
+
+    if (tipoImovelAtivo) {
+        const tipoTermo = this.tipoImovel.trim().toLowerCase();
+        listaFiltrada = listaFiltrada.filter(
+            (imovel) => imovel['tipoImovel'] && String(imovel['tipoImovel']).trim().toLowerCase() === tipoTermo
+        );
+    }
+
+    if (localizacaoAtiva) {
+        const termo = this.localizacao.trim().toLowerCase();
+        listaFiltrada = listaFiltrada.filter(
+            (imovel) =>
+                (imovel['endereco'] && String(imovel['endereco']).toLowerCase().includes(termo)) ||
+                (imovel['cidade'] && String(imovel['cidade']).toLowerCase().includes(termo))
+        );
+    }
+
+    if (valorAtivo) {
+        if (this.valor === 'Acima de R$ 5.000') {
+            listaFiltrada = listaFiltrada.filter(
+                (imovel) => imovel['total'] && Number(imovel['total']) > 5000
+            );
+        } else {
+             const limite = this.valor.includes('1.000') ? 1000 : 5000;
+             listaFiltrada = listaFiltrada.filter(
+                (imovel) => imovel['total'] && Number(imovel['total']) <= limite
+            );
+        }
+    }
+
+    this.imoveis = listaFiltrada;
+    console.log(`Filtro concluído. ${this.imoveis.length} imóveis encontrados.`);
+}
+
+  // Métodos
   toggleMenu() {
     this.menuAtivo = !this.menuAtivo;
   }
@@ -80,35 +150,46 @@ export class ImovelComponent implements OnInit {
     }
   }
 
-  // Verifica se imóvel já é favorito
+   // Lógica de favoritos
   isFavorito(imovelId: number): boolean {
-    return this.interessesCliente.some((i) => i.imovelId === imovelId);
+    return this.interessesCliente.some((i) => i.imovelId.toString() === imovelId.toString());
   }
 
-  // Adiciona ou remove interesse
   toggleFavorito(imovelId: number) {
-    console.log('Clicou no favorito:', imovelId);
     if (!this.userId) return;
 
     const interesseExistente = this.interessesCliente.find(
-      (i) => i.imovelId === imovelId
+      (i) => i.imovelId.toString() === imovelId.toString()
     );
 
     if (interesseExistente) {
       this.interesseService.removeInteresse(interesseExistente.id!).subscribe({
         next: () => {
           this.interessesCliente = this.interessesCliente.filter(
-            (i) => i.imovelId !== imovelId
+            (i) => i.imovelId.toString() !== imovelId.toString()
           );
         },
         error: (err) => console.error('Erro ao remover interesse', err),
       });
     } else {
-      const novo: Interesse = { clienteId: this.userId, imovelId };
+      const novo: Interesse = { clienteId: this.userId, imovelId: imovelId as any };
       this.interesseService.addInteresse(novo).subscribe({
         next: (res) => this.interessesCliente.push(res),
         error: (err) => console.error('Erro ao adicionar interesse', err),
       });
     }
+  }
+
+limparFiltros(): void {
+    this.localizacao = '';
+    this.valor = 'Valor';
+    this.tipoImovel = 'Tipo de Imóvel';
+    this.tipoNegocio = 'Alugar';
+
+    this.filtroAtivo = false;
+
+    this.imoveis = [...this.imoveisOriginais];
+
+    console.log('Filtros limpos. Exibindo todos os imóveis.');
   }
 }

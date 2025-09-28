@@ -10,7 +10,7 @@ total: string | number | undefined;
     public id: number,
     public titulo: string,
     public corretorId: string,
-    public tipo: 'Apartamento' | 'Casa' | 'Terreno',
+    public tipoImovel: string,
     public cidade: string,
     public preco: number,
     public aluguel: number,

@@ -22,30 +22,36 @@
 </div>
 
 <!-- Filtros de busca -->
- <div class="container">
-<div class="filtros">
-  <div class="filtro-localizacao-wrapper">
-    <i class="fas fa-map-marker-alt"></i>
-    <input type="text" placeholder="Localização" class="filtro-localizacao">
+<div class="container">
+  <div class="filtros">
+    <div class="filtro-localizacao-wrapper">
+      <i class="fas fa-map-marker-alt"></i>
+      <input type="text" placeholder="Localização" class="filtro-localizacao" [(ngModel)]="localizacao"
+        name="localizacao">
+    </div>
+
+    <select class="filtro-tipo-negocio" [(ngModel)]="tipoNegocio" name="tipoNegocio">
+      <option>Alugar</option>
+      <option>Vender</option>
+    </select>
+
+    <select class="filtro-valor" [(ngModel)]="valor" name="valor">
+      <option>Valor</option>
+      <option>Até R$ 1.000</option>
+      <option>Até R$ 5.000</option>
+      <option>Acima de R$ 5.000</option>
+    </select>
+
+    <select class="filtro-tipo-imovel" [(ngModel)]="tipoImovel" name="tipoImovel">
+      <option>Tipo de Imóvel</option>
+      <option>Apartamento</option>
+      <option>Casa</option>
+      <option>Terreno</option>
+    </select>
+
+    <button class="btn-pesquisar" (click)="realizarPesquisa()" *ngIf="!filtroAtivo">Pesquisar</button>
+    <button class="btn-limpar" (click)="limparFiltros()" *ngIf="filtroAtivo">Limpar</button>
   </div>
-  <select class="filtro-tipo-negocio">
-    <option>Alugar</option>
-    <option>Vender</option>
-  </select>
-  <select class="filtro-valor">
-    <option>Valor</option>
-    <option>Até R$ 1.000</option>
-    <option>Até R$ 5.000</option>
-    <option>Acima de R$ 5.000</option>
-  </select>
-  <select class="filtro-tipo-imovel">
-    <option>Tipo de Imóvel</option>
-    <option>Apartamento</option>
-    <option>Casa</option>
-    <option>Terreno</option>
-  </select>
-  <button class="btn-pesquisar">Pesquisar</button>
-</div>
 </div>
 
 <!-- Cards de imóveis -->
@@ -68,5 +74,13 @@
       {{ imovel.endereco }}<br>
       {{ imovel.cidade }}
     </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="icons">
+    <i class="fa-brands fa-google"></i>
+    <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+    <i class="fa-brands fa-linkedin"></i>
   </div>
 </div>

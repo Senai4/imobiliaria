@@ -241,10 +241,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 .icons {
@@ -263,4 +260,3 @@ a {
   text-decoration: none;
 
 }
-
