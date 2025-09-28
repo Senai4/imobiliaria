@@ -40,7 +40,6 @@
 
 .user {
   margin-right: 30px;
-  /* Ajuste este valor para mover o ícone mais ou menos para a esquerda */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,12 +52,32 @@
 .user-name {
   color: #fff;
   font-size: 20px;
-  /* Tamanho da fonte do nome, pode ser ajustado */
   font-weight: bold;
-  /* Deixa o nome em negrito */
   padding-left: 10%;
   white-space: nowrap;
-  /* Impede que o nome quebre em várias linhas */
+}
+
+.volta-imovel {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 10;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #009B77;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  i {
+    color: white;
+    font-size: 1.5rem;
+  }
 }
 
 .container {
@@ -106,7 +125,7 @@
   bottom: 405px;
   left: 0;
   z-index: 10;
-  margin-left: 18px;
+  margin-left: 19px;
 }
 
 .label {
@@ -130,20 +149,109 @@
   font-weight: bold;
 }
 
-.informacoes .favorite {
-  margin-left: auto;
-  align-self: flex-start;
-}
-
-.informacoes .favorite .btn-favorito {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-top: -3px;
-}
-
-.informacoes .favorite .btn-favorito i {
+.informacoes .valores-linha {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   color: #009b77;
-  font-size: 24px;
+  font-size: 25px;
+}
+
+.informacoes .valores-linha .label,
+.informacoes .valores-linha p {
+  margin: 0;
+  padding: 0;
+}
+
+.informacoes .valores-linha .favorite {
+  margin-left: 60px;
+  padding: 0;
+}
+
+.detalhes {
+  position: absolute;
+  width: 713px;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-87%);
+}
+
+.detalhes .caracteristicas-principais {
+  border: 2px solid #009b77;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.detalhes .item-caracteristica {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+}
+
+.detalhes .item-caracteristica i {
+  color: #009b77;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.detalhes .item-caracteristica span {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.detalhes .descricao-completa {
+  border: 2px solid #009b77;
+  border-radius: 12px;
+  width: 713px;
+  height: 260px;
+  font-size: 18px;
+  padding: 15px 20px;
+}
+
+.detalhes .descricao-completa h2 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.detalhes .descricao-completa p {
+  color: black;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #009b77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
 }

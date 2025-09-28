@@ -11,6 +11,13 @@
   </div>
 </div>
 
+<!-- Ícone de seta para Imovel -->
+<div class="volta-imovel">
+  <a routerLink="/imovel" title="Ir para Imovel">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+</div>
+
 <!-- Container com Informações -->
 <div class="container" *ngIf="imovelDetalhado">
   <div class="container-card">
@@ -20,30 +27,36 @@
       </div>
     </div>
 
-    <div class="informacoes">
-      <span class="label">Aluguel:</span>
-      <p class="preco">R$ {{ imovelDetalhado.aluguel | number:'1.2-2' }}</p>
-      <span class="label">Condominio:</span>
-      <p class="condominio">R$ {{ imovelDetalhado.condominio | number:'1.2-2' }}</p>
-      <span class="label">IPTU:</span>
-      <p class="iptu">R$ {{ imovelDetalhado.iptu | number:'1.2-2' }}</p>
-      <span class="label">Seguro Incêndio:</span>
-      <p class="seguro">R$ {{ imovelDetalhado.seguroincendio | number:'1.2-2' }}</p>
-      <span class="label">Taxa de Serviço:</span>
-      <p class="servico">R$ {{ imovelDetalhado.taxaservico | number:'1.2-2' }}</p>
-      <span class="label">Total:</span>
-      <p class="total">R$ {{ imovelDetalhado.total | number:'1.2-2' }}</p>
+  <div class="informacoes">
 
-      <div class="favorite">
-        <button class="btn-favorito">
-          <i class="far fa-heart"></i>
-        </button>
-      </div>
+    <div class="valores-linha">
+        <span class="label">Aluguel:</span>
+        <p class="preco">R$ {{ imovelDetalhado.aluguel | number:'1.2-2' }}</p>
+
+        <span class="label">Condominio:</span>
+        <p class="condominio">R$ {{ imovelDetalhado.condominio | number:'1.2-2' }}</p>
+
+        <span class="label">IPTU:</span>
+        <p class="iptu">R$ {{ imovelDetalhado.iptu | number:'1.2-2' }}</p>
+
+        <div class="favorite">
+            <span class="favorito" (click)="toggleFavorito(imovelDetalhado!.id); $event.stopPropagation()">
+                <i [ngClass]="isFavorito(imovelDetalhado!.id) ? 'fas fa-heart text-red' : 'far fa-heart'"></i>
+            </span>
+        </div>
     </div>
+
+    <span class="label">Seguro Incêndio:</span>
+    <p class="seguro">R$ {{ imovelDetalhado.seguroincendio | number:'1.2-2' }}</p>
+    <span class="label">Taxa de Serviço:</span>
+    <p class="servico">R$ {{ imovelDetalhado.taxaservico | number:'1.2-2' }}</p>
+    <span class="label">Total:</span>
+    <p class="total">R$ {{ imovelDetalhado.total | number:'1.2-2' }}</p>
+
+</div>
   </div>
 
   <div class="detalhes">
-
   <div class="caracteristicas-principais">
     <div class="item-caracteristica">
       <i class="fas fa-bed"></i>
@@ -57,17 +70,30 @@
       <i class="fas fa-expand-alt"></i>
       <span>{{ imovelDetalhado.caracteristicas.tamanho }} m²</span>
     </div>
+    <div class="item-caracteristica">
+      <i class="fas fa-car"></i>
+      <span>{{ imovelDetalhado.caracteristicas.vagas }} Vaga</span>
+    </div>
+    <div class="item-caracteristica">
+      <i class="fa-solid fa-couch"></i>
+      <span>{{ imovelDetalhado.caracteristicas.mobilia }} Mobília</span>
+    </div>
+    <div class="item-caracteristica">
+      <i class="fas fa-paw"></i>
+      <span>{{ imovelDetalhado.caracteristicas.pet }} Pet</span>
+    </div>
   </div>
 
   <div class="descricao-completa">
-    <h2>Descrição do Imóvel</h2>
     <p>{{ imovelDetalhado.descricao }}</p>
   </div>
-
+  </div>
   </div>
 
-  </div>
-
-  <div *ngIf="!imovelDetalhado">
-    Carregando detalhes do imóvel...
+  <div class="footer">
+    <div class="icons">
+      <i class="fa-brands fa-google"></i>
+      <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
   </div>

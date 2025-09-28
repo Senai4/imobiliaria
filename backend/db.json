@@ -58,21 +58,21 @@
       "aluguel": 3500,
       "condominio": 500,
       "iptu": 200,
-      "seguroIncendio": 100,
-      "taxaServico": 50,
+      "seguroincendio": 100,
+      "taxaservico": 50,
       "total": 3850,
       "caracteristicas": {
         "quartos": 2,
         "banheiros": 2,
         "tamanho": 50,
         "vagas": 1,
-        "mobilia": "Sim",
+        "mobilia": "Com",
         "pet": "Aceita"
       },
       "endereco": "Rua Miguel Cervantes, Cachambi",
       "cidade": "Rio de Janeiro",
       "tipoImovel": "Apartamento",
-      "descricao": "Apartamento moderno, bem localizado, próximo ao comércio.",
+      "descricao": "Apartamento moderno e pronto para morar de 50m² no Cachambi, Rio de Janeiro. Este imóvel é a escolha perfeita para quem busca conforto e praticidade: possui 2 quartos e 2 banheiros, vem totalmente mobiliado e inclui 1 vaga de garagem. Com o diferencial de ser Pet Friendly, ele está situado na Rua Miguel Cervantes, próximo ao comércio local, e oferece um custo total mensal de R$ 3.850, garantindo total previsibilidade financeira.",
       "corretorId": "2"
     },
     {
@@ -90,7 +90,7 @@
         "banheiros": 1,
         "tamanho": 80,
         "vagas": 2,
-        "mobilia": "Não",
+        "mobilia": "Sem",
         "pet": "Aceita"
       },
       "endereco": "Avenida Brasil, Centro",
@@ -106,15 +106,15 @@
       "aluguel": 1800,
       "condominio": 300,
       "iptu": 50,
-      "seguroIncendio": 40,
-      "taxaServico": 30,
+      "seguroincendio": 40,
+      "taxaservico": 30,
       "total": 2180,
       "caracteristicas": {
         "quartos": 1,
         "banheiros": 1,
         "tamanho": 35,
         "vagas": 0,
-        "mobilia": "Sim",
+        "mobilia": "Com",
         "pet": "Não aceita"
       },
       "endereco": "Rua da Consolação, Consolação",
@@ -130,15 +130,15 @@
       "aluguel": 8500,
       "condominio": 1200,
       "iptu": 400,
-      "seguroIncendio": 250,
-      "taxaServico": 150,
+      "seguroincendio": 250,
+      "taxaservico": 150,
       "total": 10500,
       "caracteristicas": {
         "quartos": 4,
         "banheiros": 4,
         "tamanho": 150,
         "vagas": 3,
-        "mobilia": "Sim",
+        "mobilia": "Com",
         "pet": "Aceita"
       },
       "endereco": "Rua Oscar Freire, Jardim Paulista",
@@ -154,15 +154,15 @@
       "aluguel": 4200,
       "condominio": 600,
       "iptu": 250,
-      "seguroIncendio": 120,
-      "taxaServico": 80,
+      "seguroincendio": 120,
+      "taxaservico": 80,
       "total": 5250,
       "caracteristicas": {
         "quartos": 3,
         "banheiros": 2,
         "tamanho": 75,
         "vagas": 1,
-        "mobilia": "Não",
+        "mobilia": "Sem",
         "pet": "Aceita"
       },
       "endereco": "Rua Barão de Ipanema, Copacabana",
@@ -178,15 +178,15 @@
       "aluguel": 1200,
       "condominio": 150,
       "iptu": 30,
-      "seguroIncendio": 25,
-      "taxaServico": 15,
+      "seguroincendio": 25,
+      "taxaservico": 15,
       "total": 1420,
       "caracteristicas": {
         "quartos": 1,
         "banheiros": 1,
         "tamanho": 25,
         "vagas": 0,
-        "mobilia": "Não",
+        "mobilia": "Sem",
         "pet": "Não aceita"
       },
       "endereco": "Rua do Catete, Catete",
@@ -202,15 +202,15 @@
       "aluguel": 2800,
       "condominio": 700,
       "iptu": 150,
-      "seguroIncendio": 80,
-      "taxaServico": 40,
+      "seguroincendio": 80,
+      "taxaservico": 40,
       "total": 3170,
       "caracteristicas": {
         "quartos": 3,
         "banheiros": 2,
         "tamanho": 80,
         "vagas": 0,
-        "mobilia": "Não",
+        "mobilia": "Sem",
         "pet": "Aceita"
       },
       "endereco": "Avenida Brasil, Centro",
@@ -226,15 +226,15 @@
       "aluguel": 1800,
       "condominio": 450,
       "iptu": 50,
-      "seguroIncendio": 50,
-      "taxaServico": 20,
+      "seguroincendio": 50,
+      "taxaservico": 20,
       "total": 2020,
       "caracteristicas": {
         "quartos": 1,
         "banheiros": 1,
         "tamanho": 35,
         "vagas": 0,
-        "mobilia": "Sim",
+        "mobilia": "Com",
         "pet": "Não Aceita"
       },
       "endereco": "Rua da Consolação, Consolação",
@@ -276,24 +276,24 @@
       "imovelId": "8"
     },
     {
-      "id": "c3ca",
+      "id": "d78d",
       "clienteId": "40ec",
-      "imovelId": "1"
+      "imovelId": "4"
     },
     {
-      "id": "f3a8",
+      "id": "79e3",
       "clienteId": "40ec",
       "imovelId": "2"
     },
     {
-      "id": "3e77",
+      "id": "be83",
       "clienteId": "40ec",
       "imovelId": "3"
     },
     {
-      "id": "d78d",
+      "id": "e944",
       "clienteId": "40ec",
-      "imovelId": "4"
+      "imovelId": "1"
     }
   ]
 }
