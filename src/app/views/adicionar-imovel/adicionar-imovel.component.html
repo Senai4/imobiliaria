@@ -1,1 +1,93 @@
-<p>adicionar-imovel works!</p>
+<div class="navbar">
+
+  <div class="volta-corretores">
+    <a routerLink="/corretores" title="Ir para corretores">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </div>
+
+<div class="logo">
+  <img src="assets/img/logo.png" alt="logo">
+</div>
+
+<div class="user" *ngIf="authService.currentUser$ | async as user">
+  <i class="fas fa-user-circle"></i>
+  <span class="user-name">
+    {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+  </span>
+</div>
+</div>
+
+<div class="form-container">
+  <div class="form-card">
+
+    <form #imovelForm="ngForm" (ngSubmit)="onSubmit(imovelForm)" autocomplete="off">
+
+      <h3 class="form-section-title">Informações do Imóvel:</h3>
+      <div class="input-group grid-cols-3">
+        <input type="text" placeholder="Título" name="titulo" [(ngModel)]="imovel.titulo" required>
+        <input type="url" placeholder="URL Imagem" name="imagemUrl" [(ngModel)]="imovel.imagemUrl">
+        <input type="text" placeholder="Aluguel" name="aluguel" [(ngModel)]="imovel.aluguel" required>
+
+        <input type="text" placeholder="Condomínio" name="condominio" [(ngModel)]="imovel.condominio">
+        <input type="text" placeholder="IPTU" name="iptu" [(ngModel)]="imovel.iptu">
+        <input type="text" placeholder="Seguro Incendio" name="seguroIncendio" [(ngModel)]="imovel.seguroincendio">
+
+        <input type="number" placeholder="Taxa de Serviço" name="taxaServico" [(ngModel)]="imovel.taxaservico">
+        <input type="number" placeholder="Total" name="total" [(ngModel)]="imovel.total" required>
+      </div>
+
+      <h3 class="form-section-title">Características:</h3>
+      <div class="input-group grid-cols-5">
+        <input type="number" placeholder="Quartos" name="quartos" [(ngModel)]="imovel.caracteristicas.quartos">
+        <input type="number" placeholder="Banheiros" name="banheiros" [(ngModel)]="imovel.caracteristicas.banheiros">
+        <input type="number" placeholder="Tamanho" name="tamanho" [(ngModel)]="imovel.caracteristicas.tamanho">
+        <input type="number" placeholder="Vagas" name="vagas" [(ngModel)]="imovel.caracteristicas.vagas">
+
+        <select name="mobilia" [(ngModel)]="imovel.caracteristicas.mobilia">
+          <option value="" disabled selected>Mobília</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+        <select name="pet" [(ngModel)]="imovel.caracteristicas.pet">
+          <option value="" disabled selected>Pet</option>
+          <option value="Aceita">Aceita</option>
+          <option value="Não Aceita">Não Aceita</option>
+        </select>
+      </div>
+
+      <div class="input-group grid-cols-3">
+        <input type="text" placeholder="Endereço" name="endereco" [(ngModel)]="imovel.endereco" required>
+        <input type="text" placeholder="Cidade" name="cidade" [(ngModel)]="imovel.cidade" required>
+
+        <select name="tipoImovel" [(ngModel)]="imovel.tipoImovel">
+          <option value="" disabled selected>Tipo de Imóvel</option>
+          <option value="Apartamento">Apartamento</option>
+          <option value="Casa">Casa</option>
+          <option value="Terreno">Terreno</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <textarea placeholder="Descrição" name="descricao" [(ngModel)]="imovel.descricao"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" [disabled]="!imovelForm.valid" class="btn primary">
+          Salvar
+        </button>
+        <button type="button" (click)="onCancel()" class="btn secondary">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <div class="footer">
+    <div class="icons">
+      <i class="fa-brands fa-google"></i>
+      <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
