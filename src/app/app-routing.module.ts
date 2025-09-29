@@ -10,6 +10,7 @@ import { MeusInteressesComponent } from './views/meus-interesses/meus-interesses
 import { CorretoresComponent } from './views/corretores/corretores.component';
 import { DetalhesComponent } from './views/detalhes/detalhes.component';
 import { AdicionarImovelComponent } from './views/adicionar-imovel/adicionar-imovel.component';
+import { InteressadosComponent } from './views/interessados/interessados.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'detalhes/:id', component: DetalhesComponent },
   { path: 'imovel/:id', component: ImovelComponent,  canActivate: [CorretorGuard] },
   { path: 'adicionar-imovel', component: AdicionarImovelComponent},
+  { path: 'interessados', component: InteressadosComponent},
 ];
 
 @NgModule({

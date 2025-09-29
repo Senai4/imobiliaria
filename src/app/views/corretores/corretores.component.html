@@ -23,3 +23,28 @@
   <i class="fas fa-plus"></i>Adicionar Novo Imóvel
 </button>
 
+<div class="lista-imoveis">
+  <div class="card-imovel" *ngFor="let imovel of meusImoveis">
+    <div class="img-container">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem">
+      <span *ngIf="!imovel.imagemUrl">Sem imagem</span>
+    </div>
+
+    <div class="info">
+      <h3>{{ imovel.titulo }}</h3>
+      <p>R$ {{ imovel.total }}</p>
+      <h3 class="cidade">{{ imovel.cidade }}</h3>
+    </div>
+
+  <i class="fas fa-heart heart-icon" (click)="interessados()"></i>
+
+    <div class="acoes">
+      <button (click)="editarImovel(imovel.id!)" class="btn editar">
+        <i class="fas fa-edit"></i> Editar
+      </button>
+      <button (click)="excluirImovel(imovel.id!)" class="btn excluir">
+        <i class="fas fa-trash"></i> Excluir
+      </button>
+    </div>
+  </div>
+</div>

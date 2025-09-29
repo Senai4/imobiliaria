@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalhesComponent } from './views/detalhes/detalhes.component';
 import { AdicionarImovelComponent } from './views/adicionar-imovel/adicionar-imovel.component';
+import { InteressadosComponent } from './views/interessados/interessados.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AdicionarImovelComponent } from './views/adicionar-imovel/adicionar-imo
     HeaderComponent,
     DetalhesComponent,
     AdicionarImovelComponent,
+    InteressadosComponent,
   ],
   imports: [
     BrowserModule,

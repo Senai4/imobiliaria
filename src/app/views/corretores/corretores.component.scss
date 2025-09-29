@@ -143,3 +143,126 @@
   color: #009b77;
 }
 
+// Cards de Imoveis
+.lista-imoveis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+
+  .card-imovel {
+    flex-basis: calc(25% - 52px);
+    height: auto;
+    border: 3px solid #009b77;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .img-container {
+      width: 250px;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ccc;
+      margin-top: 20px;
+      border-radius: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: black;
+      }
+    }
+
+    .info {
+      width: 100%;
+      padding: 5px;
+      text-align: left;
+      margin-left: 25px;
+
+      h3 {
+        margin: 5px 0;
+        font-size: 25px;
+      }
+
+      p {
+        margin: 5px 0;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .cidade {
+        color: #009b77;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+
+    .acoes {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      gap: 5px;
+
+      .btn {
+        width: 100px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .editar {
+        background-color: #fff;
+        border: 1px solid #009b77;
+        color: #009b77;
+      }
+
+      .excluir {
+        background-color: #009b77;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.heart-icon {
+  position: absolute;
+  bottom: 90px;
+  right: 30px;
+  color: #009b77;
+  font-size: 35px;
+}

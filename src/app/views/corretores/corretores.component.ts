@@ -72,19 +72,42 @@ export class CorretoresComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  carregarImoveis(): void {
-  }
+ carregarImoveis(): void {
+  this.imovelService.getMeusImoveis().subscribe({
+    next: (imoveis) => {
+      this.meusImoveis = imoveis;
+    },
+    error: (err) => {
+      console.error('Erro ao carregar imóveis:', err);
+    }
+  });
+}
 
   cadastrarNovo(): void {
   }
 
-  editarImovel(imovelId: string): void {
-  }
+  editarImovel(imovelId: string | number): void {
+  this.router.navigate([`/editar-imovel/${imovelId}`]);
+}
 
-  excluirImovel(imovelId: string): void {
+excluirImovel(imovelId: string | number): void {
+  if (confirm('Tem certeza que deseja excluir este imóvel?')) {
+    this.imovelService.deleteImovel(imovelId).subscribe({
+      next: () => {
+        this.meusImoveis = this.meusImoveis.filter(i => i.id !== imovelId);
+      },
+      error: (err) => {
+        console.error('Erro ao excluir imóvel:', err);
+      }
+    });
   }
+}
 
   iradicionarImovel() {
     this.router.navigate(['/adicionar-imovel']);
+  }
+
+  interessados() {
+    this.router.navigate(['/interessados']);
   }
 }

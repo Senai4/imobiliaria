@@ -121,7 +121,7 @@
     },
     {
       "id": "5",
-      "titulo": "Apartamento com Varanda",
+      "titulo": "Apartamento",
       "imagemUrl": "assets/img/apartamento2.jpg",
       "aluguel": 4200,
       "condominio": 600,
@@ -169,7 +169,7 @@
     },
     {
       "id": "7",
-      "titulo": "Amplo Apartamento no Centro",
+      "titulo": "Apartamento no Centro",
       "imagemUrl": "assets/img/apartamento2.jpg",
       "aluguel": 2800,
       "condominio": 700,
@@ -193,7 +193,7 @@
     },
     {
       "id": "8",
-      "titulo": "Studio Confortável e Compacto",
+      "titulo": "Studio Confortável",
       "imagemUrl": "assets/img/studio3.jpg",
       "aluguel": 1800,
       "condominio": 450,
@@ -258,14 +258,14 @@
       "imovelId": "2"
     },
     {
-      "id": "3022",
-      "clienteId": "40ec",
-      "imovelId": "1"
-    },
-    {
       "id": "84f9",
       "clienteId": "40ec",
       "imovelId": "3"
+    },
+    {
+      "id": "417a",
+      "clienteId": "40ec",
+      "imovelId": "1"
     }
   ]
 }
