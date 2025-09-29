@@ -20,7 +20,6 @@ export class LoginComponent {
   exibirMensagemDeErro(mensagem: string, duracao = 2000) {
     this.mensagemErro = mensagem;
 
-    //temporizador para limpar a mensagem após a duração especificada
     setTimeout(() => {
       this.mensagemErro = '';
     }, duracao);
@@ -37,11 +36,13 @@ export class LoginComponent {
         if (loginSuccess) {
           console.log('Login bem-sucedido!');
           const usuarioAtual = this.authService.usuarioAtual();
+
           if (usuarioAtual && usuarioAtual.perfil === 'admin') {
-            this.router.navigate(['/pagina-adm']);
+            this.router.navigate(['/corretores']);
           } else {
             this.router.navigate(['/imovel']);
           }
+
         } else {
           this.exibirMensagemDeErro('Credenciais inválidas. Tente novamente.');
         }

@@ -15,6 +15,7 @@ import { HeaderComponent } from './templates/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalhesComponent } from './views/detalhes/detalhes.component';
+import { AdicionarImovelComponent } from './views/adicionar-imovel/adicionar-imovel.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +29,13 @@ import { DetalhesComponent } from './views/detalhes/detalhes.component';
     FooterComponent,
     HeaderComponent,
     DetalhesComponent,
+    AdicionarImovelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule, // módulo necessário para que a página faça as requisições HttpClient
+    HttpClientModule, 
     FormsModule,
     ReactiveFormsModule,
   ],

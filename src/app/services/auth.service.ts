@@ -66,4 +66,13 @@ export class AuthService {
     const storedUser = localStorage.getItem(this.CHAVE_AUTH);
     return storedUser ? JSON.parse(storedUser) : null;
   }
+
+    public getPerfilUsuario(): 'admin' | 'usuario' | null {
+    const user = this.usuarioAtual();
+    return user ? user.perfil : null;
+}
+
+    public isCorretor(): boolean {
+    return this.estaLogado() && this.getPerfilUsuario() === 'admin';
+}
 }

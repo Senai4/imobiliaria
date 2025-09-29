@@ -10,6 +10,7 @@ export interface CaracteristicasImovel {
 export class Imovel {
 [x: string]: any;
 total: string | number | undefined;
+public interesseId?: string | number; 
   constructor(
     public id: number,
     public titulo: string,

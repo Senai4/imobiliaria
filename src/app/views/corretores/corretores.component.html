@@ -1,1 +1,25 @@
-<p>corretores works!</p>
+<div class="navbar">
+  <div class="menuImg" #menuIcon (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="menu" #menu [class.active]="menuAtivo">
+    <a href="/home">Logout</a>
+  </div>
+
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="logo">
+  </div>
+
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+    <i class="fas fa-user-circle"></i>
+    <span class="user-name">
+      {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+    </span>
+  </div>
+</div>
+
+<button class="adicionar" (click)="iradicionarImovel()" type="submit">
+  <i class="fas fa-plus"></i>Adicionar Novo Imóvel
+</button>
+

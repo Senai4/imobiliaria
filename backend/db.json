@@ -15,34 +15,6 @@
       "nome": "Iasmin"
     },
     {
-      "id": "406c",
-      "nome": "Cleber",
-      "email": "dcleber159@gmail.com",
-      "senha": "542555in",
-      "perfil": "usuario"
-    },
-    {
-      "id": "04d6",
-      "nome": "Isabella",
-      "email": "isa@gmail.com",
-      "senha": "123456",
-      "perfil": "usuario"
-    },
-    {
-      "id": "184e",
-      "nome": "Isabella ",
-      "email": "isa2@gmail.com",
-      "senha": "123456",
-      "perfil": "usuario"
-    },
-    {
-      "id": "a380",
-      "nome": "Iasmin",
-      "email": "iasmin@gmail.com",
-      "senha": "26ZK10q2",
-      "perfil": "usuario"
-    },
-    {
       "id": "40ec",
       "nome": "Giovana",
       "email": "gigi@gmail.com",
@@ -73,7 +45,7 @@
       "cidade": "Rio de Janeiro",
       "tipoImovel": "Apartamento",
       "descricao": "Apartamento moderno e pronto para morar de 50m² no Cachambi, Rio de Janeiro. Este imóvel é a escolha perfeita para quem busca conforto e praticidade: possui 2 quartos e 2 banheiros, vem totalmente mobiliado e inclui 1 vaga de garagem. Com o diferencial de ser Pet Friendly, ele está situado na Rua Miguel Cervantes, próximo ao comércio local, e oferece um custo total mensal de R$ 3.850, garantindo total previsibilidade financeira.",
-      "corretorId": "2"
+      "corretorId": "1"
     },
     {
       "id": "2",
@@ -121,7 +93,7 @@
       "cidade": "São Paulo",
       "tipoImovel": "Apartamento",
       "descricao": "Studio moderno, perfeito para estudantes ou solteiros, próximo a transporte público.",
-      "corretorId": "3"
+      "corretorId": "1"
     },
     {
       "id": "4",
@@ -169,7 +141,7 @@
       "cidade": "Rio de Janeiro",
       "tipoImovel": "Apartamento",
       "descricao": "Apartamento espaçoso com varanda, em prédio familiar e seguro.",
-      "corretorId": "2"
+      "corretorId": "1"
     },
     {
       "id": "6",
@@ -193,7 +165,7 @@
       "cidade": "Rio de Janeiro",
       "tipoImovel": "Apartamento",
       "descricao": "Kitnet simples e funcional, próximo ao metrô, ideal para quem busca praticidade.",
-      "corretorId": "3"
+      "corretorId": "1"
     },
     {
       "id": "7",
@@ -241,7 +213,7 @@
       "cidade": "São Paulo",
       "tipoImovel": "Studio",
       "descricao": "Studio funcional e mobiliado, perfeito para estudantes ou profissionais solteiros.",
-      "corretorId": "3"
+      "corretorId": "1"
     }
   ],
   "interesses": [
@@ -281,19 +253,19 @@
       "imovelId": "4"
     },
     {
-      "id": "79e3",
+      "id": "f596",
       "clienteId": "40ec",
       "imovelId": "2"
     },
     {
-      "id": "be83",
-      "clienteId": "40ec",
-      "imovelId": "3"
-    },
-    {
-      "id": "e944",
+      "id": "3022",
       "clienteId": "40ec",
       "imovelId": "1"
+    },
+    {
+      "id": "84f9",
+      "clienteId": "40ec",
+      "imovelId": "3"
     }
   ]
 }
