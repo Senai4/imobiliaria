@@ -26,8 +26,6 @@ export class ImovelComponent implements OnInit {
   isAdmin = false;
   filtroAtivo: boolean = false;
 
-  // Imóveis: lista original (limpa) e lista filtrada (visível)
-  // Nota: Usamos 'any' temporariamente aqui para contornar o Index Signature do modelo
   imoveisOriginais: any[] = [];
   imoveis: any[] = [];
 

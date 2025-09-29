@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router'; 
 import { Imovel, CaracteristicasImovel } from 'src/app/models/imovel.model';
 
 import { ImovelService } from 'src/app/services/imovel.service';
@@ -21,6 +21,7 @@ export class AdicionarImovelComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private imovelService: ImovelService,
     public authService: AuthService
   ) {
@@ -28,6 +29,7 @@ export class AdicionarImovelComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Lógica do Usuário
     this.authService.currentUser$.subscribe((user) => {
       this.isLoggedIn = !!user;
       if (this.isLoggedIn && user) {
@@ -38,11 +40,32 @@ export class AdicionarImovelComponent implements OnInit {
         this.isAdmin = false;
       }
     });
+
+    this.route.paramMap.subscribe(params => {
+      const imovelId = params.get('id');
+      if (imovelId) {
+        this.isEditing = true;
+        this.loadImovelParaEdicao(imovelId);
+      }
+    });
+  }
+
+  loadImovelParaEdicao(id: string): void {
+    this.imovelService.getImovelById(id).subscribe({
+      next: (imovel: Imovel) => {
+        this.imovel = imovel;
+      },
+      error: (err) => {
+        console.error('Erro ao carregar imóvel para edição:', err);
+        alert('Erro ao carregar os dados do imóvel. Verifique a URL.');
+        this.router.navigate(['/corretores']);
+      }
+    });
   }
 
   inicializarImovelVazio(): Imovel {
     const novoImovel = new Imovel(
-      0,
+      undefined as any,
       '',
       '',
       '',
@@ -76,16 +99,21 @@ export class AdicionarImovelComponent implements OnInit {
       this.imovel.aluguel = Number(this.imovel.aluguel) || 0;
       this.imovel.total = Number(this.imovel.total) || 0;
 
-      this.imovelService.postImovel(this.imovel).subscribe({
+      const observable = this.isEditing
+        ? this.imovelService.putImovel(this.imovel.id, this.imovel)
+        : this.imovelService.postImovel(this.imovel);
+
+      observable.subscribe({
         next: (response) => {
-          alert('Anúncio salvo e publicado no banco de dados!');
+          const mensagem = this.isEditing ? 'alterado' : 'criado';
+          alert(`Anúncio ${mensagem} com sucesso!`);
           this.router.navigate(['/corretores']);
         },
         error: (error) => {
+          console.error('Erro ao salvar o anúncio:', error);
           alert('Erro ao salvar o anúncio. Verifique o console para detalhes.');
         }
       });
-
     } else {
       alert('Por favor, preencha todos os campos obrigatórios do formulário.');
     }

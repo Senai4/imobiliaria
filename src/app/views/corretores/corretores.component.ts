@@ -83,11 +83,8 @@ export class CorretoresComponent implements OnInit {
   });
 }
 
-  cadastrarNovo(): void {
-  }
-
   editarImovel(imovelId: string | number): void {
-  this.router.navigate([`/editar-imovel/${imovelId}`]);
+  this.router.navigate([`/adicionar-imovel/${imovelId}`]);
 }
 
 excluirImovel(imovelId: string | number): void {

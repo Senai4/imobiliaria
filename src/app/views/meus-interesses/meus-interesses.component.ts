@@ -27,9 +27,9 @@ export class MeusInteressesComponent implements OnInit {
   userId!: number;
 
   // Interesses e imóveis
-  interessesCliente: any[] = []; // lista de interesses {id, clienteId, imovelId}
-  imoveisFavoritos: any[] = []; // lista de imóveis correspondentes
-
+  interessesCliente: any[] = [];
+  imoveisFavoritos: any[] = [];
+  
   constructor(
     public authService: AuthService,
     private interesseService: InteresseService,
