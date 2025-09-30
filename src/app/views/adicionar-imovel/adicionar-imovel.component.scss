@@ -222,39 +222,3 @@ a {
   text-decoration: none;
 
 }
-
-@media (min-width: 1440px) {
-  .form-container{
-    width: 1000px;
-    margin-left: 450px;
-    margin-top: 150px;
-  }
-
-  .footer {
-  width: 100%;
-  height: 60px;
-  background-color: #009b77;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 300px;
-  z-index: 1;
-}
-
-.icons {
-  display: flex;
-  gap: 20px;
-  color: #fff;
-  font-size: 34px;
-  cursor: pointer;
-}
-
-a {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-
-}
-}
