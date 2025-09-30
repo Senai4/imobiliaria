@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   carregarDestaquesSimulados(): void {
     this.imovelService.getImovel().subscribe({
       next: (data) => {
-        this.imoveisDestaque = data.slice(0, 6);
+        this.imoveisDestaque = data.slice(0, 3);
       },
       error: (err) => {
         console.error('Erro ao carregar imóveis:', err);

@@ -9,10 +9,53 @@
   <h2>Imóveis em Destaque</h2>
 </div>
 
-<div class="imoveis-listagem-container">
+<main class="container">
+  <div *ngIf="!imoveisDestaque || imoveisDestaque.length === 0" class="message empty">
+    Nenhum imóvel em destaque encontrado no momento.
+  </div>
 
-  <div class="imoveis-grid">
-    <!-- <app-imovel-card-home *ngFor="let imovel of imoveisDestaque" [imovel]="imovel"> -->
-    <!-- </app-imovel-card-home> -->
+  <div class="card">
+    <div class="imovel-card" *ngFor="let imovel of imoveisDestaque"  (click)="irParaLogin()">
+
+      <div class="card-content">
+        <div class="imovel-imagem-area">
+          <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
+           <span *ngIf="!imovel.imagemUrl">Imagem</span>
+        </div>
+
+        <div class="imovel-info-card">
+
+          <div class="price-and-favorite">
+            <span class="imovel-preco-tipo">
+              R$ {{ imovel.total === 'Venda' ? imovel.aluguel : imovel.aluguel | number: '1.0-3' }}
+              <span class="tipo-texto"> {{ imovel.total === 'Venda' ? 'Vender' : 'Aluguel' }}</span>
+            </span>
+            <i class="far fa-heart favorite-icon" (click)="irParaLogin()"></i>
+          </div>
+
+          <p class="imovel-caracteristicas">
+            <span class="feature">{{ imovel.caracteristicas.tamanho }} m²</span>
+            -
+            <span class="feature">{{ imovel.caracteristicas.quartos }} quartos</span>
+          </p>
+
+          <p class="imovel-endereco">
+            {{ imovel.endereco }}
+          </p>
+          <p class="imovel-cidade">
+            {{ imovel.cidade }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="footer">
+  <div class="icons">
+    <i class="fa-brands fa-google"></i>
+    <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+    <i class="fa-brands fa-linkedin"></i>
   </div>
 </div>
