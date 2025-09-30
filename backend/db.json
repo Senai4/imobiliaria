@@ -27,6 +27,13 @@
       "email": "isabella@gmail.com",
       "senha": "542555in",
       "perfil": "usuario"
+    },
+    {
+      "id": "7fbf",
+      "nome": "Iasmin",
+      "email": "iasmin@gmail.com",
+      "senha": "26ZK10q2",
+      "perfil": "usuario"
     }
   ],
   "imovel": [
