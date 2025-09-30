@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #009b77;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.volta-corretores {
+  font-size: 40px;
+
+  i {
+    color: white;
+  }
+}
+
+.logo {
+  margin-left: 0;
+
+  img {
+    max-width: 20%;
+    height: auto;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+}
+
+/* Media query para telas menores (ex: metade de 1920px ≈ 960px) */
+@media (max-width: 960px) {
+  .logo img {
+    max-width: 35%;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+
+  .user {
+    padding: 0rem 0rem 0rem 0rem;
+
+    font-size: 61px;
+  }
+}
+
+.user {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 41px;
+  color: #fff;
+  cursor: pointer;
+  gap: 1px;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10%;
+  white-space: nowrap;
+}
+
+/* CONTAINER PRINCIPAL */
+.container-principal {
+  padding: 20px;
+  border: solid 3px #009b77;
+  border-radius: 20px;
+  max-width: 1000px;
+  height: 600px;
+  margin: 40px auto;
+}
+
+/* TÍTULO */
+.titulo-principal {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* LAYOUT GRID (2 COLUNAS) */
+.lista-interessados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARTÃO INDIVIDUAL */
+.cartao-interessado {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #009b77;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* ÍCONE DE PERFIL */
+.icone-perfil {
+  width: 60px;
+  height: 50px;
+  margin-right: 15px;
+  color: #009b77;
+  flex-shrink: 0;
+}
+
+.icone-perfil svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* DADOS DE CONTATO */
+.dados-contato {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nome-usuario {
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.email-usuario {
+  color: black;
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* MENSAGEM DE STATUS (Carregando/Vazio) */
+.mensagem-status {
+  text-align: center;
+  padding: 20px;
+  color: var(--cor-texto-email);
+  font-style: italic;
+}
+
+/* Responsividade: Volta para 1 coluna em telas menores */
+@media (max-width: 768px) {
+  .lista-interessados {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #009b77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+}

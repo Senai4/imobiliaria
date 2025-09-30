@@ -36,7 +36,7 @@
       <h3 class="cidade">{{ imovel.cidade }}</h3>
     </div>
 
-  <i class="fas fa-heart heart-icon" (click)="interessados()"></i>
+  <i class="fas fa-heart heart-icon" (click)="interessados(imovel.id)"></i>
 
     <div class="acoes">
       <button (click)="editarImovel(imovel.id!)" class="btn editar">

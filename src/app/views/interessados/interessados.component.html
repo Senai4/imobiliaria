@@ -1,1 +1,57 @@
-<p>interessados works!</p>
+<div class="navbar">
+
+  <div class="volta-corretores">
+    <a routerLink="/corretores" title="Ir para corretores">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </div>
+
+  <div class="logo">
+    <img src="./assets/img/logo.png" alt="logo">
+  </div>
+
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+    <i class="fas fa-user-circle"></i>
+    <span class="user-name">
+      {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+    </span>
+  </div>
+</div>
+
+<div class="container-principal">
+  <h2 class="titulo-principal">Interessados em: {{ tituloAnuncio }}</h2>
+
+  <div *ngIf="carregando" class="mensagem-status">
+    Buscando lista de interessados...
+  </div>
+
+  <div *ngIf="!carregando && interessados.length === 0" class="mensagem-status">
+    Nenhum usuário demonstrou interesse neste anúncio ainda.
+  </div>
+
+  <div *ngIf="!carregando && interessados.length > 0" class="lista-interessados">
+
+    <div class="cartao-interessado" *ngFor="let interessado of interessados">
+
+      <div class="icone-perfil">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.93 0 3.5 1.57 3.5 3.5S13.93 12 12 12s-3.5-1.57-3.5-3.5S10.07 5 12 5zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.88 6-3.88 1.99 0 5.97 1.89 6 3.88-1.29 1.94-3.5 3.22-6 3.22z" />
+        </svg>
+      </div>
+
+      <div class="dados-contato">
+        <p class="nome-usuario">{{ interessado.nome }}</p>
+        <p class="email-usuario">{{ interessado.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="icons">
+    <i class="fa-brands fa-google"></i>
+    <a href="https://github.com/Senai4/imobiliaria"><i class="fa-brands fa-github"></i></a>
+    <i class="fa-brands fa-linkedin"></i>
+  </div>
+</div>

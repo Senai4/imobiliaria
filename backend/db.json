@@ -20,6 +20,13 @@
       "email": "gigi@gmail.com",
       "senha": "1002302611",
       "perfil": "usuario"
+    },
+    {
+      "id": "6072",
+      "nome": "Isabella",
+      "email": "isabella@gmail.com",
+      "senha": "542555in",
+      "perfil": "usuario"
     }
   ],
   "imovel": [
@@ -99,12 +106,12 @@
       "id": "4",
       "titulo": "Cobertura Luxuosa",
       "imagemUrl": "assets/img/cobertura1.jpg",
-      "aluguel": 8500,
-      "condominio": 1200,
-      "iptu": 400,
+      "aluguel": 8300,
+      "condominio": "900",
+      "iptu": "300",
       "seguroincendio": 250,
       "taxaservico": 150,
-      "total": 10500,
+      "total": 9900,
       "caracteristicas": {
         "quartos": 4,
         "banheiros": 4,
@@ -223,31 +230,6 @@
       "imovelId": 1
     },
     {
-      "id": "3f74",
-      "clienteId": "2",
-      "imovelId": "1"
-    },
-    {
-      "id": "ab3b",
-      "clienteId": "406c",
-      "imovelId": "1"
-    },
-    {
-      "id": "aa85",
-      "clienteId": "406c",
-      "imovelId": "6"
-    },
-    {
-      "id": "29e8",
-      "clienteId": "406c",
-      "imovelId": "3"
-    },
-    {
-      "id": "bd05",
-      "clienteId": "406c",
-      "imovelId": "8"
-    },
-    {
       "id": "602e",
       "clienteId": "40ec",
       "imovelId": "3"
@@ -266,6 +248,26 @@
       "id": "fd01",
       "clienteId": "40ec",
       "imovelId": "2"
+    },
+    {
+      "id": "eca1",
+      "clienteId": "6072",
+      "imovelId": "1"
+    },
+    {
+      "id": "8f11",
+      "clienteId": "6072",
+      "imovelId": "3"
+    },
+    {
+      "id": "6d6d",
+      "clienteId": "6072",
+      "imovelId": "6"
+    },
+    {
+      "id": "a6fd",
+      "clienteId": "6072",
+      "imovelId": "8"
     }
   ]
 }

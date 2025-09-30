@@ -23,8 +23,9 @@ const routes: Routes = [
   { path: 'detalhes/:id', component: DetalhesComponent },
   { path: 'imovel/:id', component: ImovelComponent,  canActivate: [CorretorGuard] },
   { path: 'adicionar-imovel', component: AdicionarImovelComponent },
-  { path: 'adicionar-imovel/:id', component: AdicionarImovelComponent }, 
+  { path: 'adicionar-imovel/:id', component: AdicionarImovelComponent },
   { path: 'interessados', component: InteressadosComponent},
+  { path: 'interessados/:id', component: InteressadosComponent },
 ];
 
 @NgModule({

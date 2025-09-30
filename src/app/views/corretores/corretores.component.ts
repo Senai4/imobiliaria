@@ -47,7 +47,6 @@ export class CorretoresComponent implements OnInit {
     this.carregarImoveis();
   }
 
-  // --- Métodos de Menu ---
   toggleMenu() {
     this.menuAtivo = !this.menuAtivo;
   }
@@ -104,7 +103,9 @@ excluirImovel(imovelId: string | number): void {
     this.router.navigate(['/adicionar-imovel']);
   }
 
-  interessados() {
-    this.router.navigate(['/interessados']);
+  interessados(imovelId: string | number): void {
+    console.log('Navegando para interessados do ID:', imovelId);
+
+    this.router.navigate(['/interessados', imovelId]);
   }
 }
